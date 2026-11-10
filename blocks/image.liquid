@@ -1,0 +1,261 @@
+<!-- block image -->
+<!-- ATOMS: REQ-MINIMAALAI-DESARROLLO-CARRITO -->
+
+{% style %}
+	{% if block.settings.check_widthout_exterior_space %}
+		#shopify-block-{{ block.id }}{
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+	{% endif %}
+
+	#shopify-block-{{ block.id }}{
+		display: {% if block.settings.check_view_mobile %}block{% else %}none{% endif %};
+		width: {{ block.settings.range_mobile }}%;
+		margin-bottom: {{ block.settings.range_margin_bottom_mobile }}px;
+	}
+	@media (min-width: 1024px){
+		#shopify-block-{{ block.id }}{
+			display: {% if block.settings.check_view_desktop %}block{% else %}none{% endif %};
+			width: {{ block.settings.range_desktop }}%;
+			margin-bottom: {{ block.settings.range_margin_bottom_desktop }}px;
+		}   
+	}
+	.shopify-block-{{ block.id }}__image{
+    position: relative;
+    width: 100%;
+		height: auto;
+		{% if block.settings.range_image_mobile == 750 %}
+				max-width: 100%;
+		{% else %}
+				max-width: {{ block.settings.range_image_mobile }}px;
+		{% endif %}
+		border-radius: {{ block.settings.range_image_radius }}px;
+	}
+	@media (min-width: 1024px){
+		.shopify-block-{{ block.id }}__image{
+			{% if block.settings.range_image_desktop == 1500 %}
+					max-width: 100%;
+			{% else %}
+					max-width: {{ block.settings.range_image_desktop }}px;
+			{% endif %}
+		}
+	}
+{% endstyle %}
+
+{% liquid
+	assign shopify_img_desktop = 'shopify-block-' | append: block.id | append: '__image u-hidden lg:u-inline-block u-w__1/1'
+	assign shopify_img_mobile = 'shopify-block-' | append: block.id | append: '__image u-inline-block lg:u-hidden u-w__1/1'
+%}
+
+
+<div class="u-text-{{ block.settings.select_alignment_mobile }} lg:u-text-{{ block.settings.select_alignment_desktop }}">
+	{% if block.settings.image_desktop or block.settings.image_mobile %}
+		<picture class="u-relative">
+			{% if block.settings.image_mobile %}
+				{{ block.settings.image_mobile | image_url: width: block.settings.range_image_mobile | image_tag: loading: 'lazy', class: shopify_img_mobile }}
+			{% elsif block.settings.image_desktop %}
+				{{ block.settings.image_desktop | image_url: width: block.settings.range_image_mobile | image_tag: loading: 'lazy', class: shopify_img_mobile }}
+			{% endif %}
+			{% if block.settings.image_desktop %}
+				{{ block.settings.image_desktop | image_url: width: block.settings.range_image_desktop | image_tag: loading: 'lazy', class: shopify_img_desktop }}
+			{% else %}
+				{{ block.settings.image_mobile | image_url: width: block.settings.range_image_desktop | image_tag: loading: 'lazy', class: shopify_img_desktop }}
+			{% endif %}
+
+			{% if block.settings.url_link %}
+				<a 
+					style="
+						z-index: 5;
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+					"
+					aria-label="Group link"
+					href="{{ block.settings.url_link }}" 
+				></a>
+			{% endif %}
+		</picture>
+	{% else %}
+		{{ 'image' | placeholder_svg_tag: shopify_img_mobile }}
+		{{ 'lifestyle-1' | placeholder_svg_tag: shopify_img_desktop }}
+	{% endif %}
+</div>
+
+
+{% schema %}
+{
+  "name": "Image",
+  "settings": [
+		{
+			"type": "header",
+			"content": "Show",
+			"info": "Select the devices on which the block will be visible"
+		},
+		{
+			"type": "checkbox",
+			"id": "check_view_desktop",
+			"label": "Show desktop",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "check_view_mobile",
+			"label": "Show mobile",
+			"default": true
+		},
+
+		{
+			"type": "header",
+			"content": "Space column",
+			"info": "Select the space that the block will have with the adjacent blocks"
+		},
+		{
+			"type": "range",
+			"id": "range_desktop",
+			"label": "Size desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "%",
+			"default": 100
+		},
+		{
+			"type": "range",
+			"id": "range_mobile",
+			"label": "Size mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "%",
+			"default": 100
+		},
+		
+		{
+			"type": "header",
+			"content": "Exterior",
+			"info": "Select the exterior space of the block"
+		},
+		{
+			"type": "range",
+			"id": "range_margin_bottom_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space exterior bottom desktop",
+			"default": 10
+		},
+		{
+			"type": "range",
+			"id": "range_margin_bottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space exterior bottom mobile",
+			"default": 10
+		},
+
+		{
+			"type": "header",
+			"content": "Text",
+			"info": "Select the position, size and color of the text"
+		},
+		{
+			"type": "select",
+			"id": "select_alignment_desktop",
+			"label": "Position horizontal desktop",
+			"options": [
+				{ "value": "left", "label": "Left" },
+				{ "value": "center", "label": "Center" },
+				{ "value": "right", "label": "Right" }
+			],
+			"default": "center"
+		},
+		{
+			"type": "select",
+			"id": "select_alignment_mobile",
+			"label": "Position horizontal mobile",
+			"options": [
+				{ "value": "left", "label": "Left" },
+				{ "value": "center", "label": "Center" },
+				{ "value": "right", "label": "Right" }
+			],
+			"default": "center"
+		},
+		{
+			"type": "header",
+			"content": "Image",
+			"info": "Select the image size and other settings"
+		},
+		{
+			"type": "checkbox",
+			"id": "check_widthout_exterior_space",
+			"label": "Width without exterior space",
+			"info": "The image will have the same width as the container, without the exterior space",
+			"default": false
+		},
+		{
+			"type": "range",
+			"id": "range_image_radius",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Radius image",
+			"default": 0
+		},
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Image desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image mobile"
+    },
+    {
+			"type": "range",
+			"id": "range_image_desktop",
+			"min": 50,
+			"max": 1500,
+			"step": 50,
+			"unit": "px",
+			"label": "Width image desktop",
+			"default": 200
+    },
+    {
+			"type": "range",
+			"id": "range_image_mobile",
+			"min": 10,
+			"max": 750,
+			"step": 10,
+			"unit": "px",
+			"label": "Width image mobile",
+			"default": 100
+    },
+
+		{
+			"type": "header",
+			"content": "Link",
+			"info": "Select the link for the whole group"
+		},
+		{
+			"type": "url",
+			"id": "url_link",
+			"label": "Link"
+		},
+  ],
+  "presets": [
+    {
+      "name": "Image",
+      "category": "Basics",
+    }
+  ]
+}
+{% endschema %}

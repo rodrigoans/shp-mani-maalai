@@ -1,0 +1,127 @@
+{% liquid
+  assign id = section.id
+  assign overline = section.settings.overline
+  assign heading = section.settings.title
+  assign subheading = section.settings.subheading
+  assign columns_mobile = section.settings.columns_mobile
+  assign columns = section.settings.columns
+  assign text_max_width = section.settings.text_max_width
+  assign product_count = 6
+%}
+
+<section
+  data-section-id="{{ id }}"
+  data-section-type="recently-viewed-products"
+  data-product-handle="{{ product.handle }}"
+  data-limit="{{ product_count }}"
+  class="
+    section
+    section--bordered
+    recently-viewed-products
+    carousel
+    carousel--columns-{{ columns }}
+    carousel--columns-mobile-{{ columns_mobile }}
+    carousel--items-{{ product_count }}
+    {% if settings.enable_reveal_animations and section.settings.enable_animation %}
+      animation
+      animation--recently-viewed-products
+    {% endif %}
+  "
+>
+  {% render 'text-block',
+    id: id,
+    modifiers: 'mb5 animation--section-introduction',
+    heading_alignment: 'center',
+    overline: overline,
+    heading: heading,
+    subheading: subheading,
+    text_max_width: text_max_width
+  %}
+
+  {% render 'carousel-navigation' %}
+
+  <div class="recently-viewed-products__slider carousel__slides" data-carousel></div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.recently_viewed_products.name",
+  "class": "section-dynamic section-borderable",
+  "templates": ["product"],
+  "limit": 1,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.recently_viewed_products.settings.paragraph__intro.content"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.recently_viewed_products.settings.paragraph__aspect_ratio.content"
+    },
+    {
+      "type": "header",
+      "content": "t:shared.settings.section_style.style_header.content"
+    },
+    {
+      "id": "enable_animation",
+      "type": "checkbox",
+      "label": "t:shared.settings.section_style.enable_animation.label",
+      "info": "t:shared.settings.section_style.enable_animation.info",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:shared.settings.content_header.content"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.recently_viewed_products.settings.columns.label",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "id": "columns_mobile",
+      "type": "select",
+      "label": "t:shared.settings.columns_mobile.label",
+      "options": [
+        { "label": "t:shared.settings.columns_mobile.option_1", "value": "1" },
+        { "label": "t:shared.settings.columns_mobile.option_2", "value": "2" }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "text",
+      "id": "overline",
+      "label": "t:sections.recently_viewed_products.settings.overline.label"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.recently_viewed_products.settings.heading.label",
+      "default": "Recently viewed"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "t:sections.recently_viewed_products.settings.subheading.label"
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "label": "t:sections.recently_viewed_products.settings.text_max_width.label",
+      "min": 16,
+      "max": 50,
+      "step": 1,
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.recently_viewed_products.presets.name"
+    }
+  ]
+}
+{% endschema %}

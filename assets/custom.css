@@ -1,0 +1,121 @@
+/* Use this file to add custom css to the theme. */
+/* ATOMS: SLIDE BUTTONS - Start */
+.slideshow__content-inner-container--has-secondary-button {
+    margin: 0;
+    padding: 10px !important;
+}
+.slideshow__content-inner-container--has-secondary-button .slideshow__content-inner{
+    padding: 0;
+}
+.slideshow__content-inner-container--has-secondary-button .slideshow__content-inner-container {
+    padding: 0;
+    margin: 0;
+}
+.slideshow__content-inner-container--has-secondary-button .slideshow__buttons .slideshow__link {
+    font-size: 10px;
+    height: 35px;
+}
+.slideshow__content-inner-container--has-secondary-button .slideshow__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+}
+@media screen and (min-width: 750px) {
+    .slideshow__content-inner-container--has-secondary-button .slideshow__content {
+        padding: calc(calc(4px * 7) + calc(4px * 5)) calc(4px * 5);
+        padding: calc(var(--spacing-large) + var(--spacing-medium)) var(--spacing-medium);
+    }
+    .slideshow__content-inner-container--has-secondary-button .slideshow__content-inner {
+        padding: calc(4px * 5) 0;
+        padding: var(--spacing-medium) 0;
+    }
+    .slideshow__content-inner-container--has-secondary-button .slideshow__content-inner-container {
+        padding: calc(4px * 5);
+        padding: var(--spacing-medium);
+    }
+    .slideshow__content-inner-container--has-secondary-button .slideshow__buttons .slideshow__link{
+        font-size: var(--font-size-button);
+        height: 48px;
+        height: var(--height-button);
+    }
+    .slideshow__content-inner-container--has-secondary-button .slideshow__buttons {
+        justify-content: flex-end;
+        gap: 45%;
+    }
+}
+/* ATOMS: SLIDE BUTTONS - End */
+/* ATOMS: SUBCOLLECTION - Start */
+.collection__subcollection-carousel {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.collection__subcollection-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+.collection__subcollection {
+    display: inline-block;
+    padding: 15px 20px;
+    text-align: center;
+    border: 1px solid var(--color-border);
+    transition: border 0.3s ease;
+}
+.collection__subcollection:hover {
+    border: 1px solid var(--color-border-darker);
+}
+/* ATOMS: FOOTER WHATSAPP - Start */
+.footer__whatsapp {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 25px;
+}
+.footer__whatsapp a {
+    display: block;
+    height: 35px;
+}
+.footer__whatsapp svg {
+    width: 35px;
+    height: 35px;
+}
+.footer__whatsapp svg path {
+    fill: var(--color-footer-text);
+    transition: opacity 0.25s;
+}
+.footer__whatsapp svg path:hover {
+    opacity: 0.7;
+}
+.footer__group-content--with-social-icons {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.footer__text.rte {
+    flex: 0 0 100%;
+}
+.footer__group-content .footer__social-icons {
+    display: inline-block;
+    margin-top: 25px;
+}
+.footer__group-content .footer__social-icons .list {
+    display: flex;
+    gap: 10px;
+}
+.footer__group-content .footer__social-icons svg {
+    width: 28px;
+    height: 28px;
+}
+.footer__group-content .footer__social-icons ul li {
+    height: 28px;
+}
+/* ATOMS: FOOTER WHATSAPP - End */
+/* ATOMS: HEADER - Start */
+@media screen and (min-width: 749px) {
+    .header-container.is-sticky {
+        top: 0 !important;
+    }
+}
+/* ATOMS: HEADER - End */

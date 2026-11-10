@@ -1,0 +1,46 @@
+{% comment %} ATOMS: REQ-DISPONIBILIDAD START {% endcomment %}
+
+{% style %}
+  .shopify-block-{{ block.id }}__disponibilidad{
+    font-family: var(--font-{{ block.settings.select_font }});
+    font-weight: {{ block.settings.select_font_weight }};
+    font-size: {{ block.settings.select_size_mobile }}px;
+    color: {{ block.settings.select_color }};
+    padding: 0;
+    margin: 0;
+  }
+  @media (min-width: 1024px){
+    .shopify-block-{{ block.id }}__disponibilidad{
+      font-size: {{ block.settings.select_size_desktop }}px;
+    }
+  }
+{% endstyle %}
+
+{%- liquid
+  assign umbral_num = block.settings.umbral | plus: 0
+  assign total = 0
+  assign has_untracked_available = false
+
+  for variant in product.variants
+    if variant.inventory_management == nil and variant.available
+      assign has_untracked_available = true
+    elsif variant.inventory_management
+      assign total = total | plus: variant.inventory_quantity
+    endif
+  endfor
+
+  assign show_message = false
+  if has_untracked_available == false and umbral_num > 0 and total > 0 and total <= umbral_num
+    assign show_message = true
+  endif
+-%}
+
+{%- if show_message -%}
+  <div {{ block.shopify_attributes }} class="u-text-{{ block.settings.select_alignment_mobile }} lg:u-text-{{ block.settings.select_alignment_desktop }}">
+    <div class="u-inline-block">
+      <p class="shopify-block-{{ block.id }}__disponibilidad">{{ block.settings.mensaje | escape }}</p>
+    </div>
+  </div>
+{%- endif -%}
+
+{% comment %} ATOMS: REQ-DISPONIBILIDAD END {% endcomment %}

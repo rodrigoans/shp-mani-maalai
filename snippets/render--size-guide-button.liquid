@@ -1,0 +1,27 @@
+<!-- ATOMS: REQ-GUIA-DE-TALLAS START -->
+<!-- render--size-guide-button -->
+
+<button
+    title="guia de tallas"
+    type="button"
+    class="c-button--size-guide"
+    
+	onclick="document.querySelector('element-modal-size-guide').clickOpen()"
+>
+    {{ block.settings.text }}
+</button>
+
+{% style %}
+.c-button--size-guide{
+    display: none;
+    position: relative;
+    font-weight: 800;
+    text-decoration: underline;
+    padding: 0;
+    margin: 1rem 0;
+    border: 0;
+    background: transparent;
+}
+{% endstyle %}
+
+<!-- ATOMS: REQ-GUIA-DE-TALLAS END -->

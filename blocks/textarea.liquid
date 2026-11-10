@@ -1,0 +1,203 @@
+<!-- block textarea -->
+<!-- ATOMS: REQ-MINIMAALAI-DESARROLLO-CARRITO -->
+
+{% style %}
+	#shopify-block-{{ block.id }}{
+		display: {% if block.settings.check_view_mobile %}block{% else %}none{% endif %};
+		width: {{ block.settings.range_mobile }}%;
+		margin-bottom: {{ block.settings.range_margin_bottom_mobile }}px;
+	}
+	@media (min-width: 1024px){
+		#shopify-block-{{ block.id }}{
+			display: {% if block.settings.check_view_desktop %}block{% else %}none{% endif %};
+			width: {{ block.settings.range_desktop }}%;
+			margin-bottom: {{ block.settings.range_margin_bottom_desktop }}px;
+		}   
+	}
+	.shopify-block-{{ block.id }}__text{
+		font-family: var(--font-{{ block.settings.select_font }});
+		font-weight: {{ block.settings.select_font_weight }};
+		font-size: {{ block.settings.select_size_mobile }}px;
+		color: {{ block.settings.select_color }};
+		padding: 0;
+		margin: 0;
+	}
+	@media (min-width: 1024px){
+		.shopify-block-{{ block.id }}__text{
+			font-size: {{ block.settings.select_size_desktop }}px;
+		}   
+	}
+{% endstyle %}
+
+
+<div class="u-text-{{ block.settings.select_alignment_mobile }} lg:u-text-{{ block.settings.select_alignment_desktop }}">
+	<div class="u-inline-block">
+		<p class="shopify-block-{{ block.id }}__text">{{ block.settings.text }}</p>
+	</div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Textarea",
+  "settings": [
+		{
+			"type": "header",
+			"content": "Show",
+			"info": "Select the devices on which the block will be visible"
+		},
+		{
+			"type": "checkbox",
+			"id": "check_view_desktop",
+			"label": "Show desktop",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "check_view_mobile",
+			"label": "Show mobile",
+			"default": true
+		},
+
+		{
+			"type": "header",
+			"content": "Space column",
+			"info": "Select the space that the block will have with the adjacent blocks"
+		},
+		{
+			"type": "range",
+			"id": "range_desktop",
+			"label": "Size desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "%",
+			"default": 100
+		},
+		{
+			"type": "range",
+			"id": "range_mobile",
+			"label": "Size mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "%",
+			"default": 100
+		},
+		
+		{
+			"type": "header",
+			"content": "Exterior",
+			"info": "Select the exterior space of the block"
+		},
+		{
+			"type": "range",
+			"id": "range_margin_bottom_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space exterior bottom desktop",
+			"default": 10
+		},
+		{
+			"type": "range",
+			"id": "range_margin_bottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space exterior bottom mobile",
+			"default": 10
+		},
+
+		{
+			"type": "header",
+			"content": "Text",
+			"info": "Select the position, size and color of the text"
+		},
+		{
+			"type": "select",
+			"id": "select_alignment_desktop",
+			"label": "Position horizontal desktop",
+			"options": [
+				{ "value": "left", "label": "Left" },
+				{ "value": "center", "label": "Center" },
+				{ "value": "right", "label": "Right" }
+			],
+			"default": "center"
+		},
+		{
+			"type": "select",
+			"id": "select_alignment_mobile",
+			"label": "Position horizontal mobile",
+			"options": [
+				{ "value": "left", "label": "Left" },
+				{ "value": "center", "label": "Center" },
+				{ "value": "right", "label": "Right" }
+			],
+			"default": "center"
+		},
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui, sed efficitur ipsum bibendum ut. Donec a semper odio. Sed in nunc eget nisl convallis efficitur. Donec a semper odio. Sed in nunc eget nisl convallis efficitur."
+    },
+		{
+			"type": "select",
+			"id": "select_font",
+			"label": "Font type",
+			"options": [
+				{ "value": "heading", "label": "Heading" },
+				{ "value": "logo", "label": "Logo" },
+				{ "value": "body", "label": "Body" },
+			],
+			"default": "body"
+		},
+		{
+			"type": "select",
+			"id": "select_font_weight",
+			"label": "Font weight",
+			"options": [
+				{ "value": "lighter", "label": "Lighter" },
+				{ "value": "normal", "label": "Normal" },
+				{ "value": "bold", "label": "Bold" }
+			],
+			"default": "normal"
+		},
+		{
+			"type": "range",
+			"id": "select_size_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"default": 14,
+			"unit": "px",
+			"label": "Font size desktop"
+		},
+		{
+			"type": "range",
+			"id": "select_size_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"default": 14,
+			"unit": "px",
+			"label": "Font size mobile"
+		},
+		{
+			"type": "color",
+			"id": "select_color",
+			"label": "Text color",
+			"default": "#000000"
+		}
+  ],
+  "presets": [
+    {
+      "name": "Textarea",
+      "category": "Basics",
+    }
+  ]
+}
+{% endschema %}

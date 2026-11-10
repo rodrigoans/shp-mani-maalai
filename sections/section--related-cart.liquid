@@ -1,0 +1,307 @@
+<!-- section related cart -->
+<!-- ATOMS: REQ-MINIMAALAI-DESARROLLO-CARRITO -->
+
+{% if cart.item_count != 0 %}
+
+	{% style %}
+		.section-{{ section.id | handleize }}{
+			padding-top: {{ section.settings.range_padding_top_mobile }}px;
+			padding-bottom: {{ section.settings.range_padding_bottom_mobile }}px;
+			margin-top: -{{ section.settings.range_padding_top_mobile_negative }}px;
+			background-color: {{ section.settings.color_back_mobile }};
+		}
+		@media (min-width: 1024px){
+			.section-{{ section.id | handleize }}{
+				padding-top: {{ section.settings.range_padding_top_desktop }}px;
+				padding-bottom: {{ section.settings.range_padding_bottom_desktop }}px;
+				margin-top: -{{ section.settings.range_padding_top_desktop_negative }}px;
+				background-color: {{ section.settings.color_back_desktop }};
+			}
+		}
+		
+		.section-{{ section.id | handleize }}__container {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			{% if section.settings.page_width_mobile == 750 %}
+					max-width: 100%;
+			{% else %}
+					max-width: {{ section.settings.page_width_mobile }}px;
+			{% endif %}
+			padding-left: {{ section.settings.range_padding_x_mobile }}px;
+			padding-right: {{ section.settings.range_padding_x_mobile }}px;
+		}
+		@media (min-width: 1024px){
+			.section-{{ section.id | handleize }}__container {
+				{% if section.settings.page_width_desktop == 1500 %}
+						max-width: 100%;
+				{% else %}
+						max-width: {{ section.settings.page_width_desktop }}px;
+				{% endif %}
+				padding-left: {{ section.settings.range_padding_x_desktop }}px;
+				padding-right: {{ section.settings.range_padding_x_desktop }}px;
+			}
+		}
+
+		.section-{{ section.id | handleize }}__mx-medianil {
+			margin-left: -{{ section.settings.range_medianil_mobile }}px;
+			margin-right: -{{ section.settings.range_medianil_mobile }}px;
+		}
+		@media (min-width: 1024px){
+			.section-{{ section.id | handleize }}__mx-medianil {
+				margin-left: -{{ section.settings.range_medianil_desktop }}px;
+				margin-right: -{{ section.settings.range_medianil_desktop }}px;
+			}
+		}
+	{% endstyle %}
+
+
+	<div class="section-{{ section.id | handleize }}">
+		<div class="section-{{ section.id | handleize }}__container u-overflow-hidden">
+			<div class="section-{{ section.id | handleize }}__mx-medianil">
+				<div class="u-w__1/1 u-flex u-flex-wrap {{ section.settings.select_justify }} {{ section.settings.select_align }}">
+					{% for block in section.blocks %}
+						
+						{% style %}
+							#shopify-block-{{ block.id }}{
+								padding-left: {{ section.settings.range_medianil_mobile }}px;
+								padding-right: {{ section.settings.range_medianil_mobile }}px;
+							}
+							@media (min-width: 1024px){
+								#shopify-block-{{ block.id }}{
+									padding-left: {{ section.settings.range_medianil_desktop }}px;
+									padding-right: {{ section.settings.range_medianil_desktop }}px;
+								}
+							}
+						{% endstyle %}
+						{% render block %}
+
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endif %}
+
+
+{% schema %}
+{
+	"name": "Section base",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Background",
+			"info": "Select the background color of the section"
+		},
+		{
+			"type": "color",
+			"id": "color_back_desktop",
+			"label": "Color background desktop",
+			"default": "transparent"
+		},
+		{
+			"type": "color",
+			"id": "color_back_mobile",
+			"label": "Color background mobile",
+			"default": "transparent"
+		},
+
+		{
+			"type": "header",
+			"content": "Container",
+			"info": "Select the width of the container on desktop and mobile"
+		},
+		{
+			"type": "range",
+			"id": "page_width_desktop",
+			"min": 750,
+			"max": 1500,
+			"step": 10,
+			"default": 1140,
+			"unit": "px",
+			"label": "Width contain desktop",
+			"info": "If value is 0 it's will be show full screen"
+		},
+		{
+			"type": "range",
+			"id": "page_width_mobile",
+			"min": 200,
+			"max": 750,
+			"step": 10,
+			"default": 750,
+			"unit": "px",
+			"label": "Width contain mobile",
+			"info": "If value is 0 it's will be show full screen"
+		},
+		
+		{
+			"type": "header",
+			"content": "Space items",
+			"info": "Select the space between items in the section, this will be applied if you use columns in the section"
+		},
+		{
+			"type": "range",
+			"id": "range_medianil_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space item desktop",
+			"default": 8
+		},
+		{
+			"type": "range",
+			"id": "range_medianil_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space item mobile",
+			"default": 6
+		},
+		{
+			"type": "select",
+			"id": "select_justify",
+			"label": "Columns justify",
+			"options": [
+				{ "value": "u-justify-start", "label": "Start" },
+				{ "value": "u-justify-center", "label": "Center" },
+				{ "value": "u-justify-end", "label": "End" },
+				{ "value": "u-justify-between", "label": "Between" }
+			],
+			"default": "u-justify-start"
+		},
+		{
+			"type": "select",
+			"id": "select_align",
+			"label": "Columns align",
+			"options": [
+				{ "value": "u-items-start", "label": "Start" },
+				{ "value": "u-items-center", "label": "Center" },
+				{ "value": "u-items-end", "label": "End" }
+			],
+			"default": "u-items-center"
+		},
+
+		{
+			"type": "header",
+			"content": "Container interior",
+			"info": "Select the space interior left and right of the container"
+		},
+		{
+			"type": "range",
+			"id": "range_padding_x_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space interior desktop",
+			"default": 8
+		},
+		{
+			"type": "range",
+			"id": "range_padding_x_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space interior mobile",
+			"default": 20
+		},
+
+		{
+			"type": "header",
+			"content": "Container exterior",
+			"info": "Select the space exterior top and bottom of the container"
+		},
+		{
+			"type": "range",
+			"id": "range_padding_top_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space exterior top desktop",
+			"default": 40
+		},
+		{
+			"type": "range",
+			"id": "range_padding_bottom_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space exterior bottom desktop",
+			"default": 40
+		},
+		{
+			"type": "range",
+			"id": "range_padding_top_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space exterior top mobile",
+			"default": 20
+		},
+		{
+			"type": "range",
+			"id": "range_padding_bottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space exterior bottom mobile",
+			"default": 20
+		},
+
+		{
+			"type": "header",
+			"content": "Container exterior negative",
+			"info": "Select the space exterior top of the container negative"
+		},
+		{
+			"type": "range",
+			"id": "range_padding_top_desktop_negative",
+			"min": 0,
+			"max": 1000,
+			"step": 10,
+			"unit": "px",
+			"label": "Space exterior top desktop negative",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "range_padding_top_mobile_negative",
+			"min": 0,
+			"max": 1000,
+			"step": 10,
+			"unit": "px",
+			"label": "Space exterior top mobile negative",
+			"default": 0
+		},
+	],
+	"blocks": [
+		{ "type": "title" },
+		{ "type": "text" },
+		{ "type": "textarea" },
+		{ "type": "richtext" },
+		{ "type": "image" },
+		{ "type": "space" },
+
+		{ "type": "cart-recomendation" },
+		
+	],
+	"presets": [
+		{
+			"name": "Section base",
+      "category": "Atom basics",
+			"blocks": [
+				{ "type": "title" },
+				{ "type": "text" },
+			]
+		}
+	]
+}
+{% endschema %}

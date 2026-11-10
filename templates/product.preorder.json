@@ -1,0 +1,126 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_text_size": 32
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_text_size": 14
+          }
+        },
+        "border": {
+          "type": "border",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_popup_option": "Size",
+            "variant_popup_text": "Size guide",
+            "variant_popup_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "free_shipping_bar_cFAFYB": {
+          "type": "free_shipping_bar",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "style": "paragraph"
+          }
+        },
+        "payment_feature_widget": {
+          "type": "payment_feature_widget",
+          "settings": {
+            "column": "left",
+            "show_payment_icons": true,
+            "title": "Payment",
+            "text": "<p>Your payment information is processed securely. We do not store credit card details nor have access to your credit card information.</p>",
+            "text_alignment": "left_top",
+            "heading_max_width": 40,
+            "text_max_width": 60,
+            "link_text": "Read more",
+            "link": "",
+            "background_color": "#f4f4f4",
+            "color_background_gradient": "",
+            "color_text": "#1b1b1b",
+            "color_text_button": "#ffffff",
+            "color_background_button": "#1b1b1b"
+          }
+        },
+        "shipping_feature_widget": {
+          "type": "shipping_feature_widget",
+          "settings": {
+            "column": "left",
+            "show_estimator": true,
+            "title": "Shipping",
+            "text": "<p>Rates are approximations. Exact rates will be provided at checkout.</p>",
+            "text_alignment": "left_top",
+            "heading_max_width": 40,
+            "text_max_width": 60,
+            "background_color": "#f4f4f4",
+            "color_background_gradient": "",
+            "color_text": "#1b1b1b",
+            "color_text_button": "#ffffff",
+            "color_background_button": "#1b1b1b"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "border",
+        "variant_picker",
+        "buy_buttons",
+        "free_shipping_bar_cFAFYB",
+        "description",
+        "payment_feature_widget",
+        "shipping_feature_widget"
+      ],
+      "settings": {
+        "enable_animation": true,
+        "show_breadcrumbs": false,
+        "show_navigation_buttons": false,
+        "enable_full_width": false,
+        "image_size": "65",
+        "enable_thumbnails": true,
+        "thumbnail_position": "vertical",
+        "thumbnail_size": "medium",
+        "thumbnail_aspect_ratio": "square",
+        "enable_video_looping": true,
+        "enable_gift_card_recipient": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

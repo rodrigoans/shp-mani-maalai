@@ -1,0 +1,169 @@
+{% comment %} ATOMS: REQ-NEW-HEADER START {% endcomment %}
+<!-- c-mega-menu -->
+
+{% style %}
+
+element-mega-panel{
+  display: contents;
+}
+
+/* Positioning context for the absolute full-width panel. Additive only. */
+.header-section{
+  position: relative;
+}
+
+element-mega-panel.is-open > .c-mega-menu__panel--mega{
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* When a mega panel takes over a main-menu item, its simple dropdown stays hidden. */
+li.c-main-menu__item.is-mega > .c-main-menu__panel--simple,
+li.c-main-menu__item.is-mega-source > .nav__submenu{
+  display: none;
+}
+
+.c-mega-menu__panel{
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  z-index: 50;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  background: var(--color-header-bg, #fff);
+
+  transition: opacity 0.25s cubic-bezier(0.104, 0.204, 0.492, 1), visibility 0.25s;
+}
+
+@media (min-width: 1024px){
+  .c-mega-menu__panel{
+    display: block;
+  }
+}
+
+.c-mega-menu__panel--mega{
+  left: 0;
+  right: 0;
+
+  border-top: 1px solid var(--color-header-border, var(--color-border));
+
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.c-mega-menu__panel-inner{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.c-mega-menu__columns{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  gap: 2rem;
+}
+
+.c-mega-menu__column{
+  min-width: 160px;
+}
+
+.c-mega-menu__column-title{
+  margin: 0 0 0.75rem 0;
+
+  font-size: calc(var(--font-navigation-scale, 1) * 13px);
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--color-navigation-text-meta);
+}
+
+.c-mega-menu__column-title a{
+  text-decoration: none;
+  color: var(--color-header-links, --color-accent);
+}
+
+.c-mega-menu__column-title--active a{
+  color: var(--color-header-links-hover, --color-accent2);
+}
+
+.c-mega-menu__column-list{
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.c-mega-menu__column-item{
+  margin-bottom: 0.5rem;
+}
+
+.c-mega-menu__column-link{
+  text-decoration: none;
+  color: var(--color-body, #333);
+}
+
+.c-mega-menu__column-link:hover,
+.c-mega-menu__column-item--active .c-mega-menu__column-link{
+  color: var(--color-header-links-hover, --color-accent2);
+}
+
+.c-mega-menu__cards{
+  display: flex;
+  align-items: flex-start;
+
+  gap: 1rem;
+}
+
+.c-mega-menu__card{
+  width: 180px;
+}
+
+.c-mega-menu__card-media{
+  overflow: hidden;
+  display: block;
+  border-radius: 10px;
+}
+
+.c-mega-menu__card-image{
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+.c-mega-menu__card-title{
+  margin: 0.5rem 0 0 0;
+
+  font-size: calc(var(--font-navigation-scale, 1) * 13px);
+  font-weight: normal;
+  line-height: 1.2em;
+  text-align: left;
+}
+
+.c-mega-menu__card-title a{
+  text-decoration: none;
+  color: var(--color-header-links, --color-accent);
+}
+
+{% endstyle %}
+
+{% comment %} ATOMS: REQ-NEW-HEADER END {% endcomment %}

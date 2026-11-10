@@ -1,0 +1,125 @@
+<!-- js-element-cart-recommendation -->
+<!-- ATOMS: REQ-MINIMAALAI-DESARROLLO-CARRITO -->
+
+<script>
+  class ElementCartRecommendation extends HTMLElement {
+    constructor() {
+      super();
+      
+      this.products = [{% for item in cart.items %}{{ item.product.id }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+      this.limit = parseInt(this.dataset.limit || '6', 10);
+      this.columns = parseInt(this.dataset.columns || '4', 10);
+      this.columnsMobile = parseInt(this.dataset.columnsMobile || '1', 10);
+      this.carousel = null;
+      this.prevButton = null;
+      this.nextButton = null;
+      this.onPrevClick = () => this.carousel && this.carousel.previous();
+      this.onNextClick = () => this.carousel && this.carousel.next();
+    }
+
+    async connectedCallback() {
+      if (this.products.length === 0) return;
+
+      this.applyCarouselClasses();
+
+      // Reset content before appending fresh recommendation slides.
+      this.innerHTML = '';
+
+      await Promise.all(this.products.map(productId => this.reloadHTMLElement(productId)));
+      await this.initCarousel();
+    }
+
+    disconnectedCallback() {
+      if (this.carousel && typeof this.carousel.destroy === 'function') {
+        this.carousel.destroy();
+        this.carousel = null;
+      }
+
+      if (this.prevButton) {
+        this.prevButton.removeEventListener('click', this.onPrevClick);
+      }
+      if (this.nextButton) {
+        this.nextButton.removeEventListener('click', this.onNextClick);
+      }
+    }
+
+    ////
+
+    applyCarouselClasses() {
+      this.classList.add('carousel', 'carousel__slides');
+      this.classList.add(`carousel--columns-${this.columns}`);
+      this.classList.add(`carousel--columns-mobile-${this.columnsMobile}`);
+      this.classList.add(`carousel--items-${this.limit}`);
+    }
+
+    async reloadHTMLElement(id) {
+      const urlSection = `/recommendations/products?section_id=product-recommendations&product_id=${id}&limit=${this.limit}`;
+      const element = await fetch(urlSection)
+        .then(response => response.text())
+        .then(data => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(data, 'text/html');
+          return doc;
+        })
+        .catch(error => {
+          console.error('Unable to fetch product recommendations', error);
+        });
+
+      if (!element) return;
+      await this.updateHTML(element);
+    }
+
+    async updateHTML(doc) {
+      const newElement = doc.querySelector('.carousel__slides');
+      if (!newElement) return;
+      this.innerHTML += newElement.innerHTML;
+    }
+
+    async initCarousel() {
+      if (this.carousel || !this.querySelector('.carousel__slide')) return;
+
+      const { Flickity } = await import(flu.chunks.flickity);
+      this.carousel = new Flickity(this, {
+        adaptiveHeight: false,
+        wrapAround: false,
+        contain: true,
+        cellAlign: 'left',
+        prevNextButtons: false,
+        pageDots: false,
+        initialIndex: 0,
+        dragThreshold: 10
+      });
+
+      this.initNavigation();
+      this.carousel.resize();
+    }
+
+    initNavigation() {
+      const wrapper = this.closest('[data-cart-recommendation-wrapper]');
+      if (!wrapper) return;
+
+      this.prevButton = wrapper.querySelector('.carousel__previous-button');
+      this.nextButton = wrapper.querySelector('.carousel__next-button');
+      if (!this.prevButton || !this.nextButton) return;
+
+      this.prevButton.classList.remove('hidden');
+      this.nextButton.classList.remove('hidden');
+      this.prevButton.addEventListener('click', this.onPrevClick);
+      this.nextButton.addEventListener('click', this.onNextClick);
+
+      this.carousel.on('scroll', progress => {
+        const progressScale = progress * 100;
+        this.prevButton.disabled = progressScale < 1;
+        this.nextButton.disabled = progressScale > 99;
+      });
+
+      this.prevButton.disabled = true;
+      this.nextButton.disabled = false;
+    }
+
+  }
+
+  if (!customElements.get('element-cart-recommendation')) {
+    customElements.define('element-cart-recommendation', ElementCartRecommendation);
+  }
+</script>

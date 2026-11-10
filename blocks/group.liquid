@@ -1,0 +1,323 @@
+{% comment %} ATOMS: REQ-GUIA-DE-TALLAS-v2 START {% endcomment %}
+<!-- block group -->
+
+{% style %}
+	#shopify-block-{{ block.id }}{
+		position: relative;
+		display: {% if block.settings.check_view_mobile %}block{% else %}none{% endif %};
+		width: {{ block.settings.range_mobile }}%;
+		margin-bottom: {{ block.settings.range_margin_bottom_mobile }}px;
+	}
+	@media (min-width: 1024px){
+		#shopify-block-{{ block.id }}{
+			display: {% if block.settings.check_view_desktop %}block{% else %}none{% endif %};
+			width: {{ block.settings.range_desktop }}%;
+			margin-bottom: {{ block.settings.range_margin_bottom_desktop }}px;
+		}   
+	}
+
+	.section-block-{{ block.id | handleize }}__container {
+		width: 100%;
+		padding-top: {{ block.settings.range_padding_y_mobile }}px;
+		padding-bottom: {{ block.settings.range_padding_y_mobile }}px;
+		padding-left: {{ block.settings.range_padding_x_mobile }}px;
+		padding-right: {{ block.settings.range_padding_x_mobile }}px;
+		background-color: {{ block.settings.color_back_mobile }};
+		border-radius: {{ block.settings.range_radius }}px;
+	}
+	@media (min-width: 1024px){
+		.section-block-{{ block.id | handleize }}__container {
+			padding-top: {{ block.settings.range_padding_y_desktop }}px;
+			padding-bottom: {{ block.settings.range_padding_y_desktop }}px;
+			padding-left: {{ block.settings.range_padding_x_desktop }}px;
+			padding-right: {{ block.settings.range_padding_x_desktop }}px;
+			background-color: {{ block.settings.color_back_desktop }};
+		}
+	}
+
+	.section-block-{{ block.id | handleize }}__mx-medianil {
+		margin-left: -{{ block.settings.range_medianil_mobile }}px;
+		margin-right: -{{ block.settings.range_medianil_mobile }}px;
+	}
+	@media (min-width: 1024px){
+		.section-block-{{ block.id | handleize }}__mx-medianil {
+			margin-left: -{{ block.settings.range_medianil_desktop }}px;
+			margin-right: -{{ block.settings.range_medianil_desktop }}px;
+		}
+	}
+{% endstyle %}
+
+
+<div class="u-relative">
+
+	<div class="section-block-{{ block.id | handleize }}__container u-overflow-hidden">
+		<div class="section-block-{{ block.id | handleize }}__mx-medianil">
+			<div class="u-flex u-flex-wrap {{ block.settings.select_justify }} {{ block.settings.select_align }}">
+				{% for block_lv2 in block.blocks %}
+					
+					{% style %}
+						#shopify-block-{{ block_lv2.id }}{
+							padding-left: {{ block.settings.range_medianil_mobile }}px;
+							padding-right: {{ block.settings.range_medianil_mobile }}px;
+						}
+						@media (min-width: 1024px){
+							#shopify-block-{{ block_lv2.id }}{
+								padding-left: {{ block.settings.range_medianil_desktop }}px;
+								padding-right: {{ block.settings.range_medianil_desktop }}px;
+							}
+						}
+					{% endstyle %}
+					{% render block_lv2 %}
+					
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+	{% if block.settings.url_link %}
+		<a 
+			style="
+				z-index: 5;
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			"
+			aria-label="Group link"
+			href="{{ block.settings.url_link }}" 
+		></a>
+	{% endif %}
+	
+</div>
+
+
+{% schema %}
+{
+  "name": "Group",
+  "settings": [
+		{
+			"type": "header",
+			"content": "Show",
+			"info": "Select the devices on which the block will be visible"
+		},
+		{
+			"type": "checkbox",
+			"id": "check_view_desktop",
+			"label": "Show desktop",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "check_view_mobile",
+			"label": "Show mobile",
+			"default": true
+		},
+
+		
+		{
+			"type": "header",
+			"content": "Background",
+			"info": "Select the background color of the block and border radius of the group"
+		},
+		{
+			"type": "color",
+			"id": "color_back_desktop",
+			"label": "Color background desktop",
+			"default": "transparent"
+		},
+		{
+			"type": "color",
+			"id": "color_back_mobile",
+			"label": "Color background mobile",
+			"default": "transparent"
+		},
+
+		{
+			"type": "header",
+			"content": "Space column",
+			"info": "Select the space that the block will have with the adjacent blocks"
+		},
+		{
+			"type": "range",
+			"id": "range_desktop",
+			"label": "Size desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "%",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "range_mobile",
+			"label": "Size mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "%",
+			"default": 50
+		},
+
+		{
+			"type": "header",
+			"content": "Space items",
+			"info": "Select the space between items in the group, this will be applied if you use columns in the group"
+		},
+		{
+			"type": "range",
+			"id": "range_medianil_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space item desktop",
+			"default": 8
+		},
+		{
+			"type": "range",
+			"id": "range_medianil_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space item mobile",
+			"default": 6
+		},
+		{
+			"type": "select",
+			"id": "select_justify",
+			"label": "Columns justify",
+			"options": [
+				{ "value": "u-justify-start", "label": "Start" },
+				{ "value": "u-justify-center", "label": "Center" },
+				{ "value": "u-justify-end", "label": "End" },
+				{ "value": "u-justify-between", "label": "Between" }
+			],
+			"default": "u-justify-start"
+		},
+		{
+			"type": "select",
+			"id": "select_align",
+			"label": "Columns align",
+			"options": [
+				{ "value": "u-items-start", "label": "Start" },
+				{ "value": "u-items-center", "label": "Center" },
+				{ "value": "u-items-end", "label": "End" }
+			],
+			"default": "u-items-center"
+		},
+
+		{
+			"type": "header",
+			"content": "Container interior",
+			"info": "Select the space interior of the container"
+		},
+		{
+			"type": "range",
+			"id": "range_padding_x_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space interior eje x desktop",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "range_padding_y_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space interior eje y desktop",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "range_padding_x_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space interior eje x mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "range_padding_y_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space interior eje y mobile",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "range_radius",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Radius group",
+			"default": 0
+		},
+		
+		{
+			"type": "header",
+			"content": "Exterior",
+			"info": "Select the exterior space of the block"
+		},
+		{
+			"type": "range",
+			"id": "range_margin_bottom_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space exterior bottom desktop",
+			"default": 10
+		},
+		{
+			"type": "range",
+			"id": "range_margin_bottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space exterior bottom mobile",
+			"default": 10
+		},
+
+		{
+			"type": "header",
+			"content": "Link",
+			"info": "Select the link for the whole group"
+		},
+		{
+			"type": "url",
+			"id": "url_link",
+			"label": "Link"
+		},
+
+    ],
+    "blocks": [
+        { "type": "title" },
+        { "type": "text" },
+        { "type": "textarea" },
+        { "type": "textarea-space" },
+        { "type": "richtext" },
+        { "type": "image" },
+        { "type": "space" },
+    ],
+    "presets": [
+        {
+            "name": "Group",
+            "category": "Groups",
+        }
+    ]
+}
+{% endschema %}
+{% comment %} ATOMS: REQ-GUIA-DE-TALLAS-v2 START {% endcomment %}

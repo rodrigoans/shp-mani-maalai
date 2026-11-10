@@ -1,0 +1,125 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_text_size": 33
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_text_size": 14
+          }
+        },
+        "size_guide_fgPXfL": {
+          "type": "size-guide",
+          "settings": {
+            "text": "Guía de tallas"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_popup_option": "Size",
+            "variant_popup_text": "Size guide",
+            "variant_popup_page": ""
+          }
+        },
+        "inventory_counter": {
+          "type": "inventory_counter",
+          "settings": {
+            "show_label": false,
+            "inventory_max": "5",
+            "low_inventory_threshold": "1",
+            "show_untracked_quantity": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "free_shipping_bar_KbzgX3": {
+          "type": "free_shipping_bar",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "style": "open"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "size_guide_fgPXfL",
+        "variant_picker",
+        "inventory_counter",
+        "buy_buttons",
+        "free_shipping_bar_KbzgX3",
+        "description"
+      ],
+      "custom_css": [
+        ".product__description {font-size: 13px;}",
+        ".accordion__label {font-size: 18px;}",
+        ".inventory-counter__label {font-size: 16px;}",
+        ".inventory-counter__message {font-size: 12px;}"
+      ],
+      "settings": {
+        "enable_animation": true,
+        "show_breadcrumbs": true,
+        "show_navigation_buttons": false,
+        "enable_full_width": true,
+        "image_size": "50",
+        "enable_thumbnails": false,
+        "thumbnail_position": "vertical",
+        "thumbnail_size": "small",
+        "thumbnail_aspect_ratio": "square",
+        "enable_video_looping": false,
+        "enable_gift_card_recipient": false
+      }
+    },
+    "featured_collection_XNVBqd": {
+      "type": "featured-collection",
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "collection": "mystic-coleccion-joyeria",
+        "columns": 4,
+        "columns_mobile": "2",
+        "aspect_ratio": "global",
+        "text_position": "center",
+        "overline": "JOYAS RELACIONADAS",
+        "title": "JOYAS INSPIRADAS EN EL MISTICISMO",
+        "subheading": "",
+        "link_text": "",
+        "text_max_width": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "featured_collection_XNVBqd"
+  ]
+}

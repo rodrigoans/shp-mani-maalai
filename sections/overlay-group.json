@@ -1,0 +1,43 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "custom.overlay",
+  "name": "t:groups.overlay_group.name",
+  "sections": {
+    "popup": {
+      "type": "popup",
+      "blocks": {
+        "popup_ewGgzk": {
+          "type": "popup",
+          "settings": {
+            "popup_heading": "SUSCRÍBETE A NUESTRO NEWSLETTER",
+            "popup_subheading": "<p>Obtén un 10% de descuento en tu primera compra, ademas de noticias y promociones exclusivas.</p>",
+            "enable_newsletter_signup": true,
+            "popup_position": "top-right",
+            "popup_image": "shopify://shop_images/21603-GG-NC-FLU.MU-5.jpg",
+            "text_color": "#ffffff",
+            "bg_color": "#1d1d1d",
+            "color_background_gradient": "",
+            "border_color": "#dedede"
+          }
+        }
+      },
+      "block_order": [
+        "popup_ewGgzk"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {}
+    }
+  },
+  "order": [
+    "popup"
+  ]
+}

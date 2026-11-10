@@ -1,0 +1,112 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "enable_animation": true,
+        "content_max_width": 600
+      }
+    },
+    "collection_list_grid_VyjKYg": {
+      "type": "collection-list-grid",
+      "blocks": {
+        "collection_ATMcTz": {
+          "type": "collection",
+          "settings": {
+            "collection": "gifts-inspired-by-nature"
+          }
+        },
+        "collection_L8rGmn": {
+          "type": "collection",
+          "settings": {
+            "collection": "gifts-with-a-classic-look"
+          }
+        },
+        "collection_YAJypQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "one-of-a-kind-gifts"
+          }
+        },
+        "collection_nTpf4L": {
+          "type": "collection",
+          "settings": {
+            "collection": "joyeria-de-plata-pulseras-anillos-collares-y-mas"
+          }
+        },
+        "collection_968fPP": {
+          "type": "collection",
+          "settings": {
+            "collection": "small-amulets"
+          }
+        },
+        "collection_PKyLhB": {
+          "type": "collection",
+          "settings": {
+            "collection": "gifts-inspired-by-the-moon"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ATMcTz",
+        "collection_L8rGmn",
+        "collection_YAJypQ",
+        "collection_nTpf4L",
+        "collection_968fPP",
+        "collection_PKyLhB"
+      ],
+      "custom_css": [
+        ".collection-list-grid__title {font-size: 20px; font-family: \"ITC Stone Serif\"; text-align: center;}",
+        ".collection-list-grid__product-count {display: none;}"
+      ],
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "columns": 3,
+        "aspect_ratio": "square",
+        "overline": "",
+        "title": "",
+        "subheading": "",
+        "heading_alignment": "center",
+        "text_max_width": 36
+      }
+    },
+    "173472495144132328": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_8HNJM7": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "@manimaalai",
+            "title_color": "",
+            "alignment": "right",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_8HNJM7"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collection_list_grid_VyjKYg",
+    "173472495144132328"
+  ]
+}

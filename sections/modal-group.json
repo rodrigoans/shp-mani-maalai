@@ -1,0 +1,960 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "aside",
+  "name": "Modal group",
+  "sections": {
+    "modal_size_guide": {
+      "type": "modal--size-guide",
+      "blocks": {
+        "modal_category_39NT86": {
+          "type": "_modal-category",
+          "name": "Anillos",
+          "settings": {
+            "category_name": "Anillos",
+            "tag_name": "",
+            "download_file": "https://cdn.shopify.com/s/files/1/0550/6786/9364/files/img-anillos.jpg?v=1787776482"
+          },
+          "blocks": {
+            "group_HJrR7Y": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "check_view_desktop": true,
+                "check_view_mobile": true,
+                "color_back_desktop": "rgba(0,0,0,0)",
+                "color_back_mobile": "rgba(0,0,0,0)",
+                "range_desktop": 100,
+                "range_mobile": 100,
+                "range_medianil_desktop": 0,
+                "range_medianil_mobile": 0,
+                "select_justify": "u-justify-center",
+                "select_align": "u-items-center",
+                "range_padding_x_desktop": 0,
+                "range_padding_y_desktop": 0,
+                "range_padding_x_mobile": 0,
+                "range_padding_y_mobile": 0,
+                "range_radius": 0,
+                "range_margin_bottom_desktop": 0,
+                "range_margin_bottom_mobile": 0,
+                "url_link": ""
+              },
+              "blocks": {
+                "title_DrhB3g": {
+                  "type": "title",
+                  "name": "Title",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 5,
+                    "range_margin_bottom_mobile": 5,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "heading": "Anillos",
+                    "select_font_h": "h3",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 15,
+                    "select_size_mobile": 15,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "image_C8m3kX": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "check_widthout_exterior_space": false,
+                    "range_image_radius": 0,
+                    "image_mobile": "shopify://shop_images/icon-impresion.png",
+                    "range_image_desktop": 50,
+                    "range_image_mobile": 30,
+                    "url_link": ""
+                  },
+                  "blocks": {}
+                },
+                "text_knqzX8": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "text": "Instrucciones:",
+                    "select_font": "body",
+                    "select_font_weight": "bold",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "richtext_iAciwT": {
+                  "type": "richtext",
+                  "name": "Richtext",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "<ul><li>Imprime esta hoja ajustando la escala al 100% para que se respeten las medidas del documento.</li></ul>",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "image_ME6gmE": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "check_widthout_exterior_space": false,
+                    "range_image_radius": 0,
+                    "image_desktop": "shopify://shop_images/img-anillos_outline.jpg",
+                    "range_image_desktop": 800,
+                    "range_image_mobile": 500,
+                    "url_link": ""
+                  },
+                  "blocks": {}
+                },
+                "richtext_VGddi6": {
+                  "type": "richtext",
+                  "name": "Richtext",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "<ul><li>Ya impresa la guía, verifica las siguientes medidas con una regla:</li></ul>",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "image_TT9MgQ": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 10,
+                    "range_margin_bottom_mobile": 10,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "check_widthout_exterior_space": false,
+                    "range_image_radius": 0,
+                    "image_desktop": "shopify://shop_images/img-regla.jpg",
+                    "range_image_desktop": 200,
+                    "range_image_mobile": 170,
+                    "url_link": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "title_DrhB3g",
+                "image_C8m3kX",
+                "text_knqzX8",
+                "richtext_iAciwT",
+                "image_ME6gmE",
+                "richtext_VGddi6",
+                "image_TT9MgQ"
+              ]
+            }
+          },
+          "block_order": [
+            "group_HJrR7Y"
+          ]
+        },
+        "modal_category_ENDm6h": {
+          "type": "_modal-category",
+          "name": "Pulseras",
+          "settings": {
+            "category_name": "Pulseras",
+            "tag_name": "",
+            "download_file": "https://cdn.shopify.com/s/files/1/0550/6786/9364/files/img-brazaletes.jpg?v=1787783460"
+          },
+          "blocks": {
+            "group_cNyXTW": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "check_view_desktop": true,
+                "check_view_mobile": true,
+                "color_back_desktop": "rgba(0,0,0,0)",
+                "color_back_mobile": "rgba(0,0,0,0)",
+                "range_desktop": 100,
+                "range_mobile": 100,
+                "range_medianil_desktop": 0,
+                "range_medianil_mobile": 0,
+                "select_justify": "u-justify-center",
+                "select_align": "u-items-center",
+                "range_padding_x_desktop": 0,
+                "range_padding_y_desktop": 0,
+                "range_padding_x_mobile": 0,
+                "range_padding_y_mobile": 0,
+                "range_radius": 0,
+                "range_margin_bottom_desktop": 0,
+                "range_margin_bottom_mobile": 0,
+                "url_link": ""
+              },
+              "blocks": {
+                "title_EN7Pak": {
+                  "type": "title",
+                  "name": "Title",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 5,
+                    "range_margin_bottom_mobile": 5,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "heading": "Brazaletes",
+                    "select_font_h": "h3",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 15,
+                    "select_size_mobile": 15,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "image_icg8QU": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "check_widthout_exterior_space": false,
+                    "range_image_radius": 0,
+                    "image_mobile": "shopify://shop_images/icon-impresion.png",
+                    "range_image_desktop": 50,
+                    "range_image_mobile": 30,
+                    "url_link": ""
+                  },
+                  "blocks": {}
+                },
+                "text_BmWVVW": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "text": "Instrucciones:",
+                    "select_font": "body",
+                    "select_font_weight": "bold",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "richtext_aGne3n": {
+                  "type": "richtext",
+                  "name": "Richtext",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "<ul><li>Imprime esta hoja ajustando la escala al 100% para que se respeten las medidas del documento.</li></ul>",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "image_XPWjLq": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 10,
+                    "range_margin_bottom_mobile": 10,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "check_widthout_exterior_space": false,
+                    "range_image_radius": 0,
+                    "image_desktop": "shopify://shop_images/img-brazaletes_outline.jpg",
+                    "range_image_desktop": 1000,
+                    "range_image_mobile": 500,
+                    "url_link": ""
+                  },
+                  "blocks": {}
+                },
+                "richtext_nW3bCJ": {
+                  "type": "richtext",
+                  "name": "Richtext",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "<ul><li>Ya impresa la guía, verifica las siguientes medidas con una regla:</li></ul>",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "image_T4gnfG": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 10,
+                    "range_margin_bottom_mobile": 10,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "check_widthout_exterior_space": false,
+                    "range_image_radius": 0,
+                    "image_desktop": "shopify://shop_images/img-regla.jpg",
+                    "range_image_desktop": 200,
+                    "range_image_mobile": 170,
+                    "url_link": ""
+                  },
+                  "blocks": {}
+                },
+                "title_HRfngx": {
+                  "type": "title",
+                  "name": "Title",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "heading": "MEDIDOR DE TALLA",
+                    "select_font_h": "h4",
+                    "select_font": "body",
+                    "select_font_weight": "bold",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "textarea_aKAVYf": {
+                  "type": "textarea",
+                  "name": "Textarea",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 15,
+                    "range_margin_bottom_mobile": 15,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "Para conocer tu talla, recorta la siguiente cintilla y haz un corte sobre la línea punteada para meter la punta oscura y ajustarla sobre tu puño. Es recomendable que a la medida exacta de tu puño agregues de 2 a 3 cm para conocer tu talla.",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "textarea_space_8MDPiC": {
+                  "type": "textarea-space",
+                  "name": "Textarea space",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "color_back_desktop": "#ececec",
+                    "color_back_mobile": "#ececec",
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 10,
+                    "range_margin_bottom_mobile": 10,
+                    "range_padding_x_desktop": 20,
+                    "range_padding_y_desktop": 10,
+                    "range_padding_x_mobile": 20,
+                    "range_padding_y_mobile": 10,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "*NOTA: La mayoría de nuestros Brazaletes tienen manera de ajuste a +1-2 cm según el modelo.",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "title_EN7Pak",
+                "image_icg8QU",
+                "text_BmWVVW",
+                "richtext_aGne3n",
+                "image_XPWjLq",
+                "richtext_nW3bCJ",
+                "image_T4gnfG",
+                "title_HRfngx",
+                "textarea_aKAVYf",
+                "textarea_space_8MDPiC"
+              ]
+            }
+          },
+          "block_order": [
+            "group_cNyXTW"
+          ]
+        },
+        "modal_category_nHDHW4": {
+          "type": "_modal-category",
+          "name": "Collares",
+          "settings": {
+            "category_name": "Collares",
+            "tag_name": "",
+            "download_file": "https://cdn.shopify.com/s/files/1/0550/6786/9364/files/img-mujer-collares.jpg?v=1787784560"
+          },
+          "blocks": {
+            "group_k4jLWn": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "check_view_desktop": true,
+                "check_view_mobile": true,
+                "color_back_desktop": "rgba(0,0,0,0)",
+                "color_back_mobile": "rgba(0,0,0,0)",
+                "range_desktop": 100,
+                "range_mobile": 100,
+                "range_medianil_desktop": 0,
+                "range_medianil_mobile": 0,
+                "select_justify": "u-justify-center",
+                "select_align": "u-items-center",
+                "range_padding_x_desktop": 0,
+                "range_padding_y_desktop": 0,
+                "range_padding_x_mobile": 0,
+                "range_padding_y_mobile": 0,
+                "range_radius": 0,
+                "range_margin_bottom_desktop": 0,
+                "range_margin_bottom_mobile": 0,
+                "url_link": ""
+              },
+              "blocks": {
+                "title_HpcHFK": {
+                  "type": "title",
+                  "name": "Title",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 5,
+                    "range_margin_bottom_mobile": 5,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "heading": "Collares para “Mujer”",
+                    "select_font_h": "h3",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 15,
+                    "select_size_mobile": 15,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "image_cCjJat": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "check_widthout_exterior_space": false,
+                    "range_image_radius": 0,
+                    "image_mobile": "shopify://shop_images/icon-regla.png",
+                    "range_image_desktop": 50,
+                    "range_image_mobile": 30,
+                    "url_link": ""
+                  },
+                  "blocks": {}
+                },
+                "text_LQrbH3": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "text": "Instrucciones:",
+                    "select_font": "body",
+                    "select_font_weight": "bold",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "richtext_wUUX3b": {
+                  "type": "richtext",
+                  "name": "Richtext",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "<ul><li>A continuación te presentamos una ilustración de los largos aproximados de los collares que ofrece MANI MAALAI.</li></ul>",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "image_YUcLb7": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 10,
+                    "range_margin_bottom_mobile": 10,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "check_widthout_exterior_space": false,
+                    "range_image_radius": 0,
+                    "image_desktop": "shopify://shop_images/img-mujer-collares_outline.jpg",
+                    "range_image_desktop": 1000,
+                    "range_image_mobile": 500,
+                    "url_link": ""
+                  },
+                  "blocks": {}
+                },
+                "richtext_RYtc4Q": {
+                  "type": "richtext",
+                  "name": "Richtext",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 15,
+                    "range_margin_bottom_mobile": 15,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "<ul><li>Para mayor precisión, favor de medir un collar que ya tengas o bien rectificar la medida con una cinta métrica.</li><li>En el caso de las gargantillas, es preferible medir el contorno de tu cuello y agregar a este 1-2 cm para conocer qué talla ordenar.</li></ul>",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "textarea_space_tEQa9i": {
+                  "type": "textarea-space",
+                  "name": "Textarea space",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "color_back_desktop": "#e6ecf2",
+                    "color_back_mobile": "#e6ecf2",
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 15,
+                    "range_margin_bottom_mobile": 15,
+                    "range_padding_x_desktop": 20,
+                    "range_padding_y_desktop": 10,
+                    "range_padding_x_mobile": 20,
+                    "range_padding_y_mobile": 10,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "*En el caso de requerir una medida especial, llámanos al +52 81 8051 2100 o escríbenos a hola@manimaalai.com",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "textarea_space_9g33ma": {
+                  "type": "textarea-space",
+                  "name": "Textarea space",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "color_back_desktop": "#ececec",
+                    "color_back_mobile": "#ececec",
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 10,
+                    "range_margin_bottom_mobile": 10,
+                    "range_padding_x_desktop": 20,
+                    "range_padding_y_desktop": 10,
+                    "range_padding_x_mobile": 20,
+                    "range_padding_y_mobile": 10,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "*NOTA: en cada persona varía el acomodo y caída del collar según su complexión.",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "title_HpcHFK",
+                "image_cCjJat",
+                "text_LQrbH3",
+                "richtext_wUUX3b",
+                "image_YUcLb7",
+                "richtext_RYtc4Q",
+                "textarea_space_tEQa9i",
+                "textarea_space_9g33ma"
+              ]
+            }
+          },
+          "block_order": [
+            "group_k4jLWn"
+          ]
+        },
+        "modal_category_RfCHPf": {
+          "type": "_modal-category",
+          "name": "Collares Hombres",
+          "settings": {
+            "category_name": "",
+            "tag_name": "CollaresHombres",
+            "download_file": "https://cdn.shopify.com/s/files/1/0550/6786/9364/files/img-hombre-collares.jpg?v=1787785041"
+          },
+          "blocks": {
+            "group_WYdywW": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "check_view_desktop": true,
+                "check_view_mobile": true,
+                "color_back_desktop": "rgba(0,0,0,0)",
+                "color_back_mobile": "rgba(0,0,0,0)",
+                "range_desktop": 100,
+                "range_mobile": 100,
+                "range_medianil_desktop": 0,
+                "range_medianil_mobile": 0,
+                "select_justify": "u-justify-center",
+                "select_align": "u-items-center",
+                "range_padding_x_desktop": 0,
+                "range_padding_y_desktop": 0,
+                "range_padding_x_mobile": 0,
+                "range_padding_y_mobile": 0,
+                "range_radius": 0,
+                "range_margin_bottom_desktop": 0,
+                "range_margin_bottom_mobile": 0,
+                "url_link": ""
+              },
+              "blocks": {
+                "title_fVUnmG": {
+                  "type": "title",
+                  "name": "Title",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 5,
+                    "range_margin_bottom_mobile": 5,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "heading": "Collares para “Hombre”",
+                    "select_font_h": "h3",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 15,
+                    "select_size_mobile": 15,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "image_UDqwyq": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "check_widthout_exterior_space": false,
+                    "range_image_radius": 0,
+                    "image_mobile": "shopify://shop_images/icon-regla.png",
+                    "range_image_desktop": 50,
+                    "range_image_mobile": 30,
+                    "url_link": ""
+                  },
+                  "blocks": {}
+                },
+                "text_e3zQmA": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "text": "Instrucciones:",
+                    "select_font": "body",
+                    "select_font_weight": "bold",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "richtext_rmCiJb": {
+                  "type": "richtext",
+                  "name": "Richtext",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 0,
+                    "range_margin_bottom_mobile": 0,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "<ul><li>A continuación te presentamos una ilustración de los largos aproximados de los collares que ofrece MANI MAALAI.</li></ul>",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "image_3FXte3": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 10,
+                    "range_margin_bottom_mobile": 10,
+                    "select_alignment_desktop": "center",
+                    "select_alignment_mobile": "center",
+                    "check_widthout_exterior_space": false,
+                    "range_image_radius": 0,
+                    "image_desktop": "shopify://shop_images/img-hombre-collares_outline.jpg",
+                    "range_image_desktop": 1000,
+                    "range_image_mobile": 500,
+                    "url_link": ""
+                  },
+                  "blocks": {}
+                },
+                "richtext_jTwpXw": {
+                  "type": "richtext",
+                  "name": "Richtext",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 15,
+                    "range_margin_bottom_mobile": 15,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "<ul><li>Para mayor precisión, favor de medir un collar que ya tengas o bien rectificar la medida con una cinta métrica.</li></ul>",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "textarea_space_iR8xcf": {
+                  "type": "textarea-space",
+                  "name": "Textarea space",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "color_back_desktop": "#e6ecf2",
+                    "color_back_mobile": "#e6ecf2",
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 15,
+                    "range_margin_bottom_mobile": 15,
+                    "range_padding_x_desktop": 20,
+                    "range_padding_y_desktop": 10,
+                    "range_padding_x_mobile": 20,
+                    "range_padding_y_mobile": 10,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "*En el caso de requerir una medida especial, llámanos al +52 81 8051 2100 o escríbenos a hola@manimaalai.com",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                },
+                "textarea_space_9rYHBM": {
+                  "type": "textarea-space",
+                  "name": "Textarea space",
+                  "settings": {
+                    "check_view_desktop": true,
+                    "check_view_mobile": true,
+                    "color_back_desktop": "#ececec",
+                    "color_back_mobile": "#ececec",
+                    "range_desktop": 100,
+                    "range_mobile": 100,
+                    "range_margin_bottom_desktop": 10,
+                    "range_margin_bottom_mobile": 10,
+                    "range_padding_x_desktop": 20,
+                    "range_padding_y_desktop": 10,
+                    "range_padding_x_mobile": 20,
+                    "range_padding_y_mobile": 10,
+                    "select_alignment_desktop": "left",
+                    "select_alignment_mobile": "left",
+                    "text": "*NOTA: en cada persona varía el acomodo y caída del collar según su complexión.",
+                    "select_font": "body",
+                    "select_font_weight": "normal",
+                    "select_size_desktop": 14,
+                    "select_size_mobile": 14,
+                    "select_color": "#000000"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "title_fVUnmG",
+                "image_UDqwyq",
+                "text_e3zQmA",
+                "richtext_rmCiJb",
+                "image_3FXte3",
+                "richtext_jTwpXw",
+                "textarea_space_iR8xcf",
+                "textarea_space_9rYHBM"
+              ]
+            }
+          },
+          "block_order": [
+            "group_WYdywW"
+          ]
+        }
+      },
+      "block_order": [
+        "modal_category_39NT86",
+        "modal_category_ENDm6h",
+        "modal_category_nHDHW4",
+        "modal_category_RfCHPf"
+      ],
+      "name": "Size guide",
+      "settings": {}
+    }
+  },
+  "order": [
+    "modal_size_guide"
+  ]
+}

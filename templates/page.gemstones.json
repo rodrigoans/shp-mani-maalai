@@ -1,0 +1,932 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "enable_animation": true,
+        "content_max_width": 600
+      }
+    },
+    "text_columns_with_images_hThMaD": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column_rjqa86": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/agata.jpg",
+            "image_max_width": 50,
+            "title": "Ágata",
+            "subheading": "<p>Piedra de sanación que aporta equilibrio, crea una sensación de certeza y seguridad. </p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_LzFTGW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/agata-montana.jpg",
+            "image_max_width": 50,
+            "title": "Ágata Montana",
+            "subheading": "<p>Símbolo de estabilidad y equilibrio. Trae una sensación de calma y paz. Estimula la creatividad.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_GUiUKz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Aguamarina.jpg",
+            "image_max_width": 50,
+            "title": "Aguamarina",
+            "subheading": "<p>Estimula el autoconocimiento, inspira el intelecto, equilibra las emociones, reduce el estrés y calma la mente.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_F467Vq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/amatosta-m.jpg",
+            "image_max_width": 50,
+            "title": "Amatista",
+            "subheading": "<p>Una piedra protectora que bloquea las energías negativas. Promueve la sabiduría espiritual y la intuición.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_3C8NkY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Ambar.jpg",
+            "image_max_width": 50,
+            "title": "Ámbar",
+            "subheading": "<p>Absorbe energías negativas. Fomenta la compasión inspira el intelecto y<br/>brinda sabiduría.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_jzjnyy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Apatito.jpg",
+            "image_max_width": 50,
+            "title": "Apatito",
+            "subheading": "<p>Piedra de inspiración, claridad y equilibrio. Mejora la concentración. Estimula la creatividad y el intelecto.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        }
+      },
+      "block_order": [
+        "column_rjqa86",
+        "column_LzFTGW",
+        "column_GUiUKz",
+        "column_F467Vq",
+        "column_3C8NkY",
+        "column_jzjnyy"
+      ],
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "columns": 3,
+        "overline": "MANI MAALAI",
+        "title": "Significado de Gemas",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "text_alignment": "center",
+        "text_max_width": 36
+      }
+    },
+    "text_columns_with_images_BFKkkz": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column_PtHTHM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Calcita.jpg",
+            "image_max_width": 50,
+            "title": "Calcita",
+            "subheading": "<p>Reduce el estrés, equilibra las emociones, estimula el desarrollo espiritual y limpia las energías negativas</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_jKMphF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Calcedonia.jpg",
+            "image_max_width": 50,
+            "title": "Calcedonia",
+            "subheading": "<p>Estimula las habilidades de aprendizaje, fomenta el optimismo y buena voluntad. Ayuda a elevar el estado de ánimo.<br/><br/></p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_XRFyt3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Cianita.jpg",
+            "image_max_width": 50,
+            "title": "Cianita",
+            "subheading": "<p>Piedra de protección, intuición, lealtad y conciencia. Promueve la concentración, la calma y claridad mental.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_KXRMmm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Citrino.jpg",
+            "image_max_width": 50,
+            "title": "Citrino",
+            "subheading": "<p>Fomenta la generosidad, fortalece la concentración. Revitaliza la mente, estimula la creatividad.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_CnyzLW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/coral.jpg",
+            "image_max_width": 50,
+            "title": "Coral",
+            "subheading": "<p>Piedra de sutileza. Símbolo de felicidad y deleite. Aleja las emociones negativas y trae paz interior.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_gqJztM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cornalina.jpg",
+            "image_max_width": 50,
+            "title": "Cornalina",
+            "subheading": "<p>Piedra de vitalidad y motivación. Favorece la claridad mental y protege de energía negativa.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        }
+      },
+      "block_order": [
+        "column_PtHTHM",
+        "column_jKMphF",
+        "column_XRFyt3",
+        "column_KXRMmm",
+        "column_CnyzLW",
+        "column_gqJztM"
+      ],
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "columns": 3,
+        "overline": "",
+        "title": "",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "text_alignment": "center",
+        "text_max_width": 36
+      }
+    },
+    "text_columns_with_images_zYbkqE": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column_LiDeNk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/crisoprasa2.jpg",
+            "image_max_width": 50,
+            "title": "Crisoprasa",
+            "subheading": "<p>Piedra de confianza y calma. Fomenta la energía positiva y la relajación. Estimula la creatividad.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_QPK7TX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cuarzo.jpg",
+            "image_max_width": 50,
+            "title": "Cuarzo",
+            "subheading": "<p>Amplifica la energía de otras piedras,  aumentar la claridad mental. Disipa energías negativas<br/><br/></p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_4y9cxt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cuarzo-humo.jpg",
+            "image_max_width": 50,
+            "title": "Cuarzo Humo",
+            "subheading": "<p>Piedra sanadora que ayuda a neutralizar y bloquear el estrés. Ayuda a la meditación y protege el aura.<br/></p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_YWbN7a": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cuarzo-dendritico.jpg",
+            "image_max_width": 50,
+            "title": "Cuarzo Dendrítico",
+            "subheading": "<p>Conocido como la piedra de abundancia, trae plenitud, paz y crecimiento. Te apoya en tiempos de cambios.<br/><br/><br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_pR8PkW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cuarzo-rosa.jpg",
+            "image_max_width": 50,
+            "title": "Cuarzo Rosa",
+            "subheading": "<p>Sanador y equilibrador emocional, limpia el resentimiento, aumenta el amor a uno mismo, promueve el perdón.<br/></p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_Qbpdzy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Cuarzo_rutilado.jpg",
+            "image_max_width": 50,
+            "title": "Cuarzo Rutilado",
+            "subheading": "<p>Ayuda a la inspiración, magnifica la energía positiva, da una visión creativa, enfoca y dirige la mente.</p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        }
+      },
+      "block_order": [
+        "column_LiDeNk",
+        "column_QPK7TX",
+        "column_4y9cxt",
+        "column_YWbN7a",
+        "column_pR8PkW",
+        "column_Qbpdzy"
+      ],
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "columns": 3,
+        "overline": "",
+        "title": "",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "text_alignment": "center",
+        "text_max_width": 36
+      }
+    },
+    "text_columns_with_images_8aXppF": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column_HPBhMH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/diamante.jpg",
+            "image_max_width": 50,
+            "title": "Diamante",
+            "subheading": "<p>El diamante simboliza la pureza. Estimula la imaginación, ayuda a las aspiraciones espirituales. </p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_Xxr4RG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/herkimer.jpg",
+            "image_max_width": 50,
+            "title": "Herkimer",
+            "subheading": "<p>Piedra de fuerza, energía, confianza e intuición. Favorece la meditación para una mayor atención.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_iFcCmq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/druza.jpg",
+            "image_max_width": 50,
+            "title": "Drusa",
+            "subheading": "<p>Está asociada con la paz, la tranquilidad y la paciencia. Es una piedra de armonía, unidad y amor.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_RcCfBb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/esmeralda.jpg",
+            "image_max_width": 50,
+            "title": "Esmeralda",
+            "subheading": "<p>Piedra de sabiduría, lealtad y protección. Símbolo de abundancia, juventud y renovación.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_966dxy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/fluorita.jpg",
+            "image_max_width": 50,
+            "title": "Fluorita",
+            "subheading": "<p>Piedra de claridad y limpieza de energía negativa. Brinda protección y disipa el estrés. Ayuda a la meditación.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_UDTacn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/granate.jpg",
+            "image_max_width": 50,
+            "title": "Granate",
+            "subheading": "<p>Piedra de protección, equilibrio y vitalidad. Símbolo de amor, lealtad y amistad.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        }
+      },
+      "block_order": [
+        "column_HPBhMH",
+        "column_Xxr4RG",
+        "column_iFcCmq",
+        "column_RcCfBb",
+        "column_966dxy",
+        "column_UDTacn"
+      ],
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "columns": 3,
+        "overline": "",
+        "title": "",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "text_alignment": "center",
+        "text_max_width": 36
+      }
+    },
+    "text_columns_with_images_NaUAbx": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column_yfNmV9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/iolita.jpg",
+            "image_max_width": 50,
+            "title": "Iolita",
+            "subheading": "<p>Piedra de visión, autoconocimiento. fortaleza, verdad e independencia. Ayuda a alejar los miedos.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_px7yMJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/jade-verde.jpg",
+            "image_max_width": 50,
+            "title": "Jade Verde",
+            "subheading": "<p>Brinda paz, protege y crea armonía, trae buena suerte. Restablece el equilibrio emocional. Crea un ambiente sereno.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_GNGtt9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/jaspe-amarillo.jpg",
+            "image_max_width": 50,
+            "title": "Jaspe Amarillo",
+            "subheading": "<p>Absorbe energías negativas, inspira la imaginación y promueve el pensamiento claro. Calma los nervios.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_CX4cqp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/jaspe-rojo.jpg",
+            "image_max_width": 50,
+            "title": "Jaspe Rojo",
+            "subheading": "<p>Estimula la energía, absorbe cualquier negatividad. Inspira cambios positivos y nuevos comienzos.</p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_KpGQhT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/kunzita.jpg",
+            "image_max_width": 50,
+            "title": "Kunzita",
+            "subheading": "<p>Piedra del amor propio. Estimula la expresión  y la creatividad. Fomenta la compasión, promueve la paz interior.</p>",
+            "text_max_width": 39,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_C9UgmN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/labradorita.jpg",
+            "image_max_width": 50,
+            "title": "Labradorita",
+            "subheading": "<p>Piedra de transformación, valor y fuerza, desvía la energía negativa e inseguridades. Aumenta la intuición </p>",
+            "text_max_width": 41,
+            "link": "",
+            "link_text": "Read more"
+          }
+        }
+      },
+      "block_order": [
+        "column_yfNmV9",
+        "column_px7yMJ",
+        "column_GNGtt9",
+        "column_CX4cqp",
+        "column_KpGQhT",
+        "column_C9UgmN"
+      ],
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "columns": 3,
+        "overline": "",
+        "title": "",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "text_alignment": "center",
+        "text_max_width": 36
+      }
+    },
+    "text_columns_with_images_BRracV": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column_eLRR3Y": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/lapislazuli.jpg",
+            "image_max_width": 50,
+            "title": "Lapislázuli",
+            "subheading": "<p>Libera el estrés y brinda serenidad. Aporta objetividad y claridad mental, aumenta la confianza en sí mismo.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_crPDrn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/lava-volcanica.jpg",
+            "image_max_width": 50,
+            "title": "Lava Volcánica",
+            "subheading": "<p>Calma los trastornos del sueño, reduce los miedos emocionales, trae la curación interior profunda.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_NreheA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/madre-perla.jpg",
+            "image_max_width": 50,
+            "title": "Madre Perla",
+            "subheading": "<p>Piedra de gran valor espiritual, atrae amor y prosperidad. Aumentar la intuición y la imaginación.<br/></p>",
+            "text_max_width": 41,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_kndkCg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/obsidiana.jpg",
+            "image_max_width": 50,
+            "title": "Obsidiana",
+            "subheading": "<p>Alienta el optimismo. Brinda protección que aporta paz interior y fortaleza. Proporciona apoyo durante el cambio.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_j7NVJG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ojo-de-tigre.jpg",
+            "image_max_width": 50,
+            "title": "Ojo de Tigre",
+            "subheading": "<p>Piedra poderosa, protectora y armonizadora. Atrae abundancia y prosperidad. Equilibra las emociones.<br/><br/><br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_Mad4TM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/oplao.jpg",
+            "image_max_width": 50,
+            "title": "Ópalo",
+            "subheading": "<p>Controla el temperamento, absorbe sentimientos negativos, trae lealtad y fidelidad. Fomenta el amor y optimismo.</p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        }
+      },
+      "block_order": [
+        "column_eLRR3Y",
+        "column_crPDrn",
+        "column_NreheA",
+        "column_kndkCg",
+        "column_j7NVJG",
+        "column_Mad4TM"
+      ],
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "columns": 3,
+        "overline": "",
+        "title": "",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "text_alignment": "center",
+        "text_max_width": 36
+      }
+    },
+    "text_columns_with_images_tjYiTR": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column_VCi8pY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/onix-negro.jpg",
+            "image_max_width": 50,
+            "title": "Ónix Negro",
+            "subheading": "<p>Reduce las preocupaciones y los miedos abrumadores. Es utilizado como un amuleto contra la energía negativa.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_a4EF3M": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/onix-verde.jpg",
+            "image_max_width": 50,
+            "title": "Ónix Verde",
+            "subheading": "<p>Disminuye el estrés, miedos y preocupaciones. Promueve la resilencia. Alienta decisiones sabias.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_8iUHBH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/peridoto.jpg",
+            "image_max_width": 50,
+            "title": "Peridoto",
+            "subheading": "<p>Piedra de salud, riqueza y protección. Símbolo de paz y felicidad. Promueve la claridad mental.</p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_wUHAjQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/PRL.WH.png",
+            "image_max_width": 50,
+            "title": "Perla",
+            "subheading": "<p>Piedra de armonía y equilibrio emocional. Símbolo de pureza, paz, amor y lealtad.</p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_yhpbMt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/piedra-luna_42966a27-a9a1-47d9-811f-fc5fbded31a6.jpg",
+            "image_max_width": 50,
+            "title": "Piedra Luna",
+            "subheading": "<p>Piedra de armonía, nuevos comienzos y crecimiento interior. Ayuda a equilibrar las emociones y estimula la intuición. </p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_Wedp3n": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/piedra-sol.jpg",
+            "image_max_width": 50,
+            "title": "Piedra Sol",
+            "subheading": "<p>Brinda felicidad, alegría y buena suerte. Atrae energía luminosa, eleva tu espíritu y fomenta el optimismo.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        }
+      },
+      "block_order": [
+        "column_VCi8pY",
+        "column_a4EF3M",
+        "column_8iUHBH",
+        "column_wUHAjQ",
+        "column_yhpbMt",
+        "column_Wedp3n"
+      ],
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "columns": 3,
+        "overline": "",
+        "title": "",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "text_alignment": "center",
+        "text_max_width": 36
+      }
+    },
+    "text_columns_with_images_Nam9fn": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column_iqJgLF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pirita.jpg",
+            "image_max_width": 50,
+            "title": "Pirita",
+            "subheading": "<p>Piedra de abundancia. Favorece la energía positiva. Ayuda a calmar la ansiedad y frustración.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_DADEDj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ruby.jpg",
+            "image_max_width": 50,
+            "title": "Rubí",
+            "subheading": "<p>Aumenta la generosidad y el entusiasmo. Piedra del corazón. Símbolo de amor, pasión y poder. </p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_WgkfXi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ruby-estrella.jpg",
+            "image_max_width": 50,
+            "title": "Rubí Estrella",
+            "subheading": "<p>Aumenta la confianza, ayuda a superar la timidez. Promueve la fuerza, aumenta la creatividad y trae buena suerte.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_bgqRRL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/selenita.jpg",
+            "image_max_width": 50,
+            "title": "Selenita",
+            "subheading": "<p>Se asocia con la pureza, paz, sabiduría y espiritualidad. Te ayuda a alcanzar claridad mental.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_U7k4tn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/tanzanita.jpg",
+            "image_max_width": 50,
+            "title": "Tanzanita",
+            "subheading": "<p>Piedra de intuición, buena suerte y renovación. Promueve la autoconfianza, claridad y paz interior.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_VM9PnL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/topacio.jpg",
+            "image_max_width": 50,
+            "title": "Topacio",
+            "subheading": "<p>Piedra de la verdad e intuición. Símbolo de paz, felicidad y esperanza. Promueve la autoconfianza y creatividad.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        }
+      },
+      "block_order": [
+        "column_iqJgLF",
+        "column_DADEDj",
+        "column_WgkfXi",
+        "column_bgqRRL",
+        "column_U7k4tn",
+        "column_VM9PnL"
+      ],
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "columns": 3,
+        "overline": "",
+        "title": "",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "text_alignment": "center",
+        "text_max_width": 36
+      }
+    },
+    "text_columns_with_images_FyTi4n": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column_96GJhQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/topacio-azul_41cb26ba-cc7c-42a2-828d-1fdb3f66c6d5.jpg",
+            "image_max_width": 50,
+            "title": "Topacio Azul",
+            "subheading": "<p>Ayuda a la creatividad, da claridad, apoya los pensamientos positivos y las afirmaciones.<br/></p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_a9GARd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/topacio-dorado_77cad6d0-8a86-4822-9a49-ee18dc5d0353.jpg",
+            "image_max_width": 50,
+            "title": "Topacio Dorado",
+            "subheading": "<p>Desarrolla la intuición, promueve la conciencia interior y el optimismo, ayuda a comunicar ideas.</p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_hHWqak": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/turmalina.jpg",
+            "image_max_width": 50,
+            "title": "Turmalina Negra",
+            "subheading": "<p>Piedra de protección, alineación y energía positiva. Promueve la salud, la autoconfianza y autorealización.<br/></p>",
+            "text_max_width": 41,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_DWfrHi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/turmalina-rosa.jpg",
+            "image_max_width": 50,
+            "title": "Turmalina Rosa",
+            "subheading": "<p>Piedra protectora, ayuda a la concentración y confianza, brinda paz y relajación.<br/></p>",
+            "text_max_width": 16,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_i9JhB3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/turmalina-verde.jpg",
+            "image_max_width": 50,
+            "title": "Turmalina Verde",
+            "subheading": "<p>Brinda alegría y equilibrio espiritual. Disipa el miedo, equilibra las emociones, restaura el optimismo.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_m7JQ8U": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/turquesa.jpg",
+            "image_max_width": 50,
+            "title": "Turquesa",
+            "subheading": "<p>Piedra de valentía, amistad y protección. Estimula el equilibrio mental e intuición y favorece la empatía.</p>",
+            "text_max_width": 41,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_J8EfJP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/zafiro.jpg",
+            "image_max_width": 50,
+            "title": "Zafiro",
+            "subheading": "<p>Piedra de sabiduría, serenidad y confianza. Ayuda a encontrar la estabilidad y el bienestar interior.</p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column_GdabDF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/zirconia.jpg",
+            "image_max_width": 50,
+            "title": "Zirconia",
+            "subheading": "<p>Piedra de protección, prosperidad y abundancia. Se cree que puede atraer la riqueza y la buena fortuna.<br/></p>",
+            "text_max_width": 40,
+            "link": "",
+            "link_text": "Read more"
+          }
+        }
+      },
+      "block_order": [
+        "column_96GJhQ",
+        "column_a9GARd",
+        "column_hHWqak",
+        "column_DWfrHi",
+        "column_i9JhB3",
+        "column_m7JQ8U",
+        "column_J8EfJP",
+        "column_GdabDF"
+      ],
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "columns": 3,
+        "overline": "",
+        "title": "",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "text_alignment": "center",
+        "text_max_width": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "text_columns_with_images_hThMaD",
+    "text_columns_with_images_BFKkkz",
+    "text_columns_with_images_zYbkqE",
+    "text_columns_with_images_8aXppF",
+    "text_columns_with_images_NaUAbx",
+    "text_columns_with_images_BRracV",
+    "text_columns_with_images_tjYiTR",
+    "text_columns_with_images_Nam9fn",
+    "text_columns_with_images_FyTi4n"
+  ]
+}

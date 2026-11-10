@@ -1,0 +1,10 @@
+{%- if product -%}
+  <div
+    data-section-type="recently-viewed-item"
+    data-recently-viewed-item
+  >
+    <div class="recently-viewed__product-item carousel__slide">
+      {% render 'product-item', prod: product, aspect_ratio: settings.product_listing_aspect_ratio %}
+    </div>
+  </div>
+{%- endif -%}

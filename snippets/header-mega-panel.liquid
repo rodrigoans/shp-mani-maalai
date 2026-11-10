@@ -1,0 +1,91 @@
+{% comment %} ATOMS: REQ-NEW-HEADER START {% endcomment %}
+
+{% style %}
+	#shopify-block-{{ block.id }}{
+		display: contents;
+	}
+{% endstyle %}
+
+{% liquid
+	assign menu_handle = block.settings.menu
+	assign menu_obj = linklists[menu_handle]
+	assign mega_menu_links = menu_obj.links
+	assign mega_link_handle = block.settings.menu_link_title | strip | handleize
+	assign mega_link = nil
+	if mega_menu_links != blank and mega_link_handle != blank
+		for menu_link in mega_menu_links
+			assign menu_link_handle = menu_link.title | strip | handleize
+			if menu_link_handle == mega_link_handle
+				assign mega_link = menu_link
+			endif
+		endfor
+	endif
+%}
+
+{% if mega_link %}
+	<element-mega-panel link="{{ mega_link_handle }}">
+		<div class="c-mega-menu__panel c-mega-menu__panel--mega">
+			<div class="c-mega-menu__panel-inner">
+				<div class="c-mega-menu__columns">
+					{% for childlink in mega_link.links limit: 6 %}
+						<div class="c-mega-menu__column">
+							<h3 class="c-mega-menu__column-title{% if childlink.child_active or childlink.active %} c-mega-menu__column-title--active{% endif %}">
+								<a href="{{ childlink.url }}">{{ childlink.title }}</a>
+							</h3>
+							{% if childlink.links.size > 0 %}
+								<ul class="c-mega-menu__column-list">
+									{% for grandchildlink in childlink.links %}
+										<li class="c-mega-menu__column-item{% if grandchildlink.active %} c-mega-menu__column-item--active{% endif %}">
+											<a href="{{ grandchildlink.url }}" class="c-mega-menu__column-link">{{- grandchildlink.title | escape -}}</a>
+										</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+				<div class="c-mega-menu__cards">
+					{% for index in (1..3) %}
+						{% liquid
+							assign card_image_key = "card_image_" | append: index
+							assign card_text_key = "card_text_" | append: index
+							assign card_link_key = "card_link_" | append: index
+							assign card_image = block.settings[card_image_key]
+							assign card_text = block.settings[card_text_key]
+							assign card_link = block.settings[card_link_key]
+							if card_image == blank and card_text == blank
+								continue
+							endif
+						%}
+						<div class="c-mega-menu__card">
+							{% if card_link != blank %}
+								<a href="{{ card_link.url }}" class="c-mega-menu__card-media">
+							{% else %}
+								<div class="c-mega-menu__card-media">
+							{% endif %}
+								{% if card_image != blank %}
+									{{ card_image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'c-mega-menu__card-image' }}
+								{% endif %}
+							{% if card_link != blank %}
+								</a>
+							{% else %}
+								</div>
+							{% endif %}
+							{%- if card_text != blank -%}
+								<h3 class="c-mega-menu__card-title">
+									{% if card_link != blank %}
+										<a href="{{ card_link.url }}">{{ card_text }}</a>
+									{% else %}
+										{{ card_text }}
+									{% endif %}
+								</h3>
+							{%- endif -%}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</element-mega-panel>
+{% endif %}
+
+{% comment %} ATOMS: REQ-NEW-HEADER END {% endcomment %}

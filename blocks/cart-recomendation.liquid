@@ -1,0 +1,161 @@
+<!-- block cart recommendation -->
+<!-- ATOMS: REQ-MINIMAALAI-DESARROLLO-CARRITO -->
+
+{% style %}
+	#shopify-block-{{ block.id }}{
+		display: {% if block.settings.check_view_mobile %}block{% else %}none{% endif %};
+		width: {{ block.settings.range_mobile }}%;
+		margin-bottom: {{ block.settings.range_margin_bottom_mobile }}px;
+	}
+	@media (min-width: 1024px){
+		#shopify-block-{{ block.id }}{
+			display: {% if block.settings.check_view_desktop %}block{% else %}none{% endif %};
+			width: {{ block.settings.range_desktop }}%;
+			margin-bottom: {{ block.settings.range_margin_bottom_desktop }}px;
+		}   
+	}
+
+	.c-arousel__butttons .carousel__navigation {
+		bottom: 50%;
+	}
+{% endstyle %}
+
+
+<section
+  class="
+		u-relative
+		c-arousel__butttons
+		
+		section 
+    carousel
+	"
+	data-cart-recommendation-wrapper
+>
+	{% render 'carousel-navigation' %}
+	
+	<element-cart-recommendation
+
+		data-limit="{{ block.settings.range_data_limit }}"
+		data-columns="{{ block.settings.range_data_columns }}"
+		data-columns-mobile="{{ block.settings.range_data_columns_mobile }}"
+	>
+	</element-cart-recommendation>
+
+</section>
+
+
+{% schema %}
+{
+  "name": "Cart Recommendation",
+  "settings": [
+		{
+			"type": "header",
+			"content": "Show",
+			"info": "Select the devices on which the block will be visible"
+		},
+		{
+			"type": "checkbox",
+			"id": "check_view_desktop",
+			"label": "Show desktop",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "check_view_mobile",
+			"label": "Show mobile",
+			"default": true
+		},
+
+		{
+			"type": "header",
+			"content": "Space column",
+			"info": "Select the space that the block will have with the adjacent blocks"
+		},
+		{
+			"type": "range",
+			"id": "range_desktop",
+			"label": "Size desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "%",
+			"default": 100
+		},
+		{
+			"type": "range",
+			"id": "range_mobile",
+			"label": "Size mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "%",
+			"default": 100
+		},
+		
+		{
+			"type": "header",
+			"content": "Exterior",
+			"info": "Select the exterior space of the block"
+		},
+		{
+			"type": "range",
+			"id": "range_margin_bottom_desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space exterior bottom desktop",
+			"default": 10
+		},
+		{
+			"type": "range",
+			"id": "range_margin_bottom_mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "px",
+			"label": "Space exterior bottom mobile",
+			"default": 10
+		},
+		
+		{
+			"type": "header",
+			"content": "Carousel",
+			"info": "Select the configuration of the carousel"
+		},
+		{
+			"type": "range",
+			"id": "range_data_limit",
+			"min": 1,
+			"max": 10,
+			"step": 1,
+			"label": "Num of products to show for each item in the cart",
+			"default": 3
+		},
+		{
+			"type": "range",
+			"id": "range_data_columns",
+			"min": 1,
+			"max": 6,
+			"step": 1,
+			"label": "Columns desktop",
+			"default": 4
+		},
+		{
+			"type": "range",
+			"id": "range_data_columns_mobile",
+			"min": 1,
+			"max": 3,
+			"step": 1,
+			"label": "Columns mobile",
+			"default": 2
+		}
+  ],
+  "presets": [
+    {
+      "name": "Cart Recommendation",
+      "category": "Cart",
+    }
+  ]
+}
+{% endschema %}

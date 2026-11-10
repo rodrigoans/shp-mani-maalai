@@ -1,0 +1,77 @@
+{% comment %}
+  ATOMS: FREESHIPPING BAR, CART DREAWER, CART
+{% endcomment %}
+
+{% style %}
+  .drawer .free_shipping_progress_bar {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .free_shipping_progress_bar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .free-shipping-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+    background-color: #d8f3dc;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  .free-shipping-text svg path {
+    stroke-width: 4;
+    stroke: #2d6a4f;
+  }
+
+  .progress-bar__text p {
+    margin: 0;
+    display: inline-block;
+  }
+
+  .progress-bar__wrapper {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .progress-bar__fill {
+    height: 100%;
+    background-color: #204D39;
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+  }
+{% endstyle %}
+
+{% if settings.free_shipping_text or settings.progress_text %}
+  <div class="free_shipping_progress_bar">
+    {% assign free_shipping_limit = settings.free_shipping_limit | times: 1 %}
+    {% assign current_variant = cart.total_price %}
+    {% assign current_price = current_variant | divided_by: 100 %}
+    {% assign progress_percentage = current_price | times: 100 | divided_by: free_shipping_limit %}
+    {% assign progress_percentage_total = progress_percentage | round %}
+    {% assign progress_text = settings.progress_text | split: '$limit' %}
+
+    <div class="free-shipping-text {% unless free_shipping_limit <= current_price %}hide{% endunless %}">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>{{ settings.free_shipping_text }}</div>
+    </div>
+    <div class="progress-bar {% if free_shipping_limit <= current_price %}hide{% endif %}">
+      <div class="progress-bar__wrapper">
+          <div class="progress-bar__fill" style="width: {{ progress_percentage_total }}%"></div>
+      </div>
+      <div class="progress-bar__text">{{ progress_text[0] }} <strong class="js-subtotal-product" data-free-shipping-limit="{{ free_shipping_limit }}">{{ free_shipping_limit | minus: current_price | times: 100 | money }}</strong> {{ progress_text[1] }}</div>
+    </div>
+  </div>
+{% endif %}

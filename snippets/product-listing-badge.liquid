@@ -1,0 +1,21 @@
+{% liquid
+  comment
+    Renders a single product badge for the product page header block and product cards.
+
+    Required parameters:
+      - text: { String } The badge text.
+      - type: { String } The type of badge
+
+    Optional parameters:
+      - handle: { String } The handleized version of the badge text.
+  endcomment
+-%}
+
+<div
+  class="badge {{ type }}-badge type-body-small ttu lh-title"
+  {% if handle != blank and type == 'custom' -%}
+    data-custom-handle="{{ handle }}"
+  {%- endif %}
+>
+  {{ text }}
+</div>

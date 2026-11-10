@@ -1,0 +1,212 @@
+{% comment %} ATOMS: REQ-NEW-HEADER START {% endcomment %}
+<!-- js-element-mega-panel.liquid -->
+
+<script>
+
+	class ElementMegaPanel extends HTMLElement {
+		constructor() {
+			super();
+			this.linkHandle = '';
+			this.menuItem = null;
+			this.menuLink = null;
+			this.closeDelay = 100;
+			this.closeTimer = null;
+			this.handleMenuItemMouseEnter = this.handleMenuItemMouseEnter.bind(this);
+			this.handleMenuItemMouseLeave = this.handleMenuItemMouseLeave.bind(this);
+			this.handlePanelMouseEnter = this.handlePanelMouseEnter.bind(this);
+			this.handlePanelMouseLeave = this.handlePanelMouseLeave.bind(this);
+			this.handleMenuLinkClick = this.handleMenuLinkClick.bind(this);
+			this.handleDocumentClick = this.handleDocumentClick.bind(this);
+			this.handleDocumentKeydown = this.handleDocumentKeydown.bind(this);
+		}
+
+		connectedCallback() {
+			this.linkHandle = (this.getAttribute('link') || '').trim();
+			if (!this.linkHandle) {
+				return;
+			}
+
+			this.menuItem = this.handleFindMenuItem();
+			if (!this.menuItem) {
+				return;
+			}
+
+			this.menuLink = this.menuItem.querySelector(':scope > a');
+			this.menuItem.classList.add('is-mega');
+			this.menuItem.addEventListener('mouseenter', this.handleMenuItemMouseEnter);
+			this.menuItem.addEventListener('mouseleave', this.handleMenuItemMouseLeave);
+			this.addEventListener('mouseenter', this.handlePanelMouseEnter);
+			this.addEventListener('mouseleave', this.handlePanelMouseLeave);
+			if (this.menuLink) {
+				this.menuLink.addEventListener('click', this.handleMenuLinkClick);
+			}
+			document.addEventListener('click', this.handleDocumentClick);
+			document.addEventListener('keydown', this.handleDocumentKeydown);
+		}
+
+		////
+		// Find the main menu item whose data-item-title matches this panel link.
+		////
+
+		handleFindMenuItem() {
+			const items = document.querySelectorAll('.c-main-menu__item[data-item-title]');
+			for (const item of items) {
+				if (this.handleize(item.getAttribute('data-item-title')) === this.linkHandle) {
+					return item;
+				}
+			}
+			return null;
+		}
+
+		handleize(text) {
+			return (text || '')
+				.toString()
+				.normalize('NFD')
+				.replace(/[\u0300-\u036f]/g, '')
+				.toLowerCase()
+				.trim()
+				.replace(/\s+/g, '-')
+				.replace(/[^a-z0-9-]/g, '');
+		}
+
+		////
+		// Public actions.
+		////
+
+		clickOpen() {
+			this.handleCloseOthers();
+			this.classList.add('is-open');
+			this.handleSyncAria(true);
+		}
+
+		clickClose() {
+			this.classList.remove('is-open');
+			this.handleSyncAria(false);
+		}
+
+		handleCloseOthers() {
+			document.querySelectorAll('element-mega-panel.is-open').forEach((panel) => {
+				if (panel !== this && typeof panel.clickClose === 'function') {
+					panel.clickClose();
+				}
+			});
+		}
+
+		handleSyncAria(expanded) {
+			if (this.menuLink) {
+				this.menuLink.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+			}
+		}
+
+		handleIsMousedownMode() {
+			const host = this.menuItem ? this.menuItem.closest('[data-navigation-interaction]') : null;
+			const scope = host || document.querySelector('[data-navigation-interaction]');
+			return scope && scope.getAttribute('data-navigation-interaction') === 'mousedown';
+		}
+
+		////
+		// Hover bridge between menu item and panel.
+		////
+
+		handleMenuItemMouseEnter() {
+			if (this.handleIsMousedownMode()) {
+				return;
+			}
+			this.handleCancelClose();
+			this.clickOpen();
+		}
+
+		handleMenuItemMouseLeave(event) {
+			if (this.handleIsMousedownMode()) {
+				return;
+			}
+			if (event.relatedTarget && this.contains(event.relatedTarget)) {
+				return;
+			}
+			this.handleScheduleClose();
+		}
+
+		handlePanelMouseEnter() {
+			this.handleCancelClose();
+		}
+
+		handlePanelMouseLeave(event) {
+			if (this.handleIsMousedownMode()) {
+				return;
+			}
+			if (event.relatedTarget && this.menuItem && this.menuItem.contains(event.relatedTarget)) {
+				return;
+			}
+			this.handleScheduleClose();
+		}
+
+		handleMenuLinkClick(event) {
+			if (!this.handleIsMousedownMode()) {
+				return;
+			}
+			event.preventDefault();
+			if (this.classList.contains('is-open')) {
+				this.clickClose();
+			} else {
+				this.handleCancelClose();
+				this.clickOpen();
+			}
+		}
+
+		handleDocumentClick(event) {
+			if (!this.classList.contains('is-open')) {
+				return;
+			}
+			if (this.contains(event.target)) {
+				return;
+			}
+			if (this.menuItem && this.menuItem.contains(event.target)) {
+				return;
+			}
+			this.clickClose();
+		}
+
+		handleDocumentKeydown(event) {
+			if (event.key === 'Escape' && this.classList.contains('is-open')) {
+				this.clickClose();
+			}
+		}
+
+		handleScheduleClose() {
+			this.handleCancelClose();
+			this.closeTimer = setTimeout(() => {
+				this.clickClose();
+			}, this.closeDelay);
+		}
+
+		handleCancelClose() {
+			if (this.closeTimer) {
+				clearTimeout(this.closeTimer);
+				this.closeTimer = null;
+			}
+		}
+
+		disconnectedCallback() {
+			this.handleCancelClose();
+			if (this.menuItem) {
+				this.menuItem.classList.remove('is-mega');
+				this.menuItem.removeEventListener('mouseenter', this.handleMenuItemMouseEnter);
+				this.menuItem.removeEventListener('mouseleave', this.handleMenuItemMouseLeave);
+			}
+			if (this.menuLink) {
+				this.menuLink.removeEventListener('click', this.handleMenuLinkClick);
+			}
+			document.removeEventListener('click', this.handleDocumentClick);
+			document.removeEventListener('keydown', this.handleDocumentKeydown);
+			this.removeEventListener('mouseenter', this.handlePanelMouseEnter);
+			this.removeEventListener('mouseleave', this.handlePanelMouseLeave);
+		}
+	}
+
+	if (!customElements.get('element-mega-panel')) {
+		customElements.define('element-mega-panel', ElementMegaPanel);
+	}
+
+</script>
+
+{% comment %} ATOMS: REQ-NEW-HEADER END {% endcomment %}

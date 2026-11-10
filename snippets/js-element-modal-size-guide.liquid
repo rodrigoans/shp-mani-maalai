@@ -1,0 +1,119 @@
+<!-- ATOMS: REQ-GUIA-DE-TALLAS START -->
+<!-- js-element-modal-size-guide -->
+
+<script>
+
+  class ElementModalSizeGuide extends HTMLElement {
+    constructor() {
+      super();
+
+      this.state = false; // false = cerrado, true = abierto
+      this.backdrop = document.querySelector('[js-element-modal-size-guide--backdrop]');
+      this.onSectionSelect = this.handleSectionSelect.bind(this);
+      this.onSectionLoad = this.handleSectionLoad.bind(this);
+
+      this.body = document.body;
+    }
+
+    connectedCallback() {
+      this.updateAvailableGuidesVisibility();
+      this.handleStateChanged();
+
+      // Si estamos en modo customize y la sección es seleccionada, abrir el modal
+      if (window.Shopify && window.Shopify.designMode) {
+        document.addEventListener('shopify:section:select', this.onSectionSelect);
+        document.addEventListener('shopify:section:load', this.onSectionLoad);
+      }
+    }
+
+    disconnectedCallback() {
+      if (window.Shopify && window.Shopify.designMode) {
+        document.removeEventListener('shopify:section:select', this.onSectionSelect);
+        document.removeEventListener('shopify:section:load', this.onSectionLoad);
+      }
+    }
+
+    // metodos para abrir el modal
+    clickOpen() {
+      this.updateAvailableGuidesVisibility();
+      this.state = true;
+      this.handleStateChanged();
+    }
+    
+    // metodos para cerrar el modal
+    clickClose() {
+      this.state = false;
+      this.handleStateChanged();
+    }
+
+    ////
+
+    updateAvailableGuidesVisibility() {
+      const availableGuides = this.querySelectorAll('.c-modal-size-guide__available');
+
+      availableGuides.forEach((guide) => {
+        guide.style.display = 'none';
+
+        const parentBlock = guide.closest('.shopify-block');
+        if (parentBlock) {
+          parentBlock.style.display = 'none';
+        }
+      });
+
+      if (availableGuides.length > 0) {
+        const lastGuide = availableGuides[availableGuides.length - 1];
+        lastGuide.style.display = 'block';
+
+        const lastGuideParentBlock = lastGuide.closest('.shopify-block');
+        if (lastGuideParentBlock) {
+          lastGuideParentBlock.style.display = 'block';
+        }
+      }
+    }
+
+    handleSectionSelect(e) {
+      // Verifica si la sección seleccionada contiene este controlador
+      if (this.closest('.shopify-section') && e.detail && e.detail.sectionId) {
+        const section = this.closest('.shopify-section');
+        if (section && section.id === `shopify-section-${e.detail.sectionId}`) {
+          this.updateAvailableGuidesVisibility();
+          this.state = true;
+          this.handleStateChanged();
+        }
+      }
+    }
+
+    handleSectionLoad(e) {
+      // Reaplica visibilidad en recargas de sección del editor
+      if (this.closest('.shopify-section') && e.detail && e.detail.sectionId) {
+        const section = this.closest('.shopify-section');
+        if (section && section.id === `shopify-section-${e.detail.sectionId}`) {
+          this.updateAvailableGuidesVisibility();
+        }
+      }
+    }
+
+    handleStateChanged() {
+      if (this.state) {
+        if (this.backdrop) this.backdrop.classList.add('is-open');
+        this.classList.add('is-open');
+
+        this.body.style.overflow = 'hidden';
+      } else {
+        if (this.backdrop) this.backdrop.classList.remove('is-open');
+        this.classList.remove('is-open');
+
+        this.body.style.overflow = '';
+      }
+    }
+    
+
+    ////
+  }
+
+  if (!customElements.get('element-modal-size-guide')){
+    customElements.define('element-modal-size-guide', ElementModalSizeGuide);
+  }
+
+</script>
+<!-- ATOMS: REQ-GUIA-DE-TALLAS END -->

@@ -1,0 +1,114 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "custom_css": [
+        ".cart-template__item {background-color: #ffff;}"
+      ],
+      "settings": {
+        "cart_ajax_enable": true,
+        "show_note": true
+      }
+    },
+    "section_base_qydJ8g": {
+      "type": "section--related-cart",
+      "blocks": {
+        "title_EY8dRM": {
+          "type": "title",
+          "settings": {
+            "check_view_desktop": true,
+            "check_view_mobile": true,
+            "range_desktop": 100,
+            "range_mobile": 100,
+            "range_margin_bottom_desktop": 10,
+            "range_margin_bottom_mobile": 10,
+            "select_alignment_desktop": "center",
+            "select_alignment_mobile": "center",
+            "heading": "COMBINAN BIEN JUNTOS",
+            "select_font_h": "h2",
+            "select_font": "heading",
+            "select_font_weight": "normal",
+            "select_size_desktop": 30,
+            "select_size_mobile": 24,
+            "select_color": "#000000"
+          },
+          "blocks": {}
+        },
+        "cart_recomendation_zqBEcx": {
+          "type": "cart-recomendation",
+          "name": "Cart Recommendation",
+          "settings": {
+            "check_view_desktop": true,
+            "check_view_mobile": true,
+            "range_desktop": 100,
+            "range_mobile": 100,
+            "range_margin_bottom_desktop": 10,
+            "range_margin_bottom_mobile": 10,
+            "range_data_limit": 3,
+            "range_data_columns": 4,
+            "range_data_columns_mobile": 2
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "title_EY8dRM",
+        "cart_recomendation_zqBEcx"
+      ],
+      "name": "Section relacionados",
+      "settings": {
+        "color_back_desktop": "rgba(0,0,0,0)",
+        "color_back_mobile": "rgba(0,0,0,0)",
+        "page_width_desktop": 1500,
+        "page_width_mobile": 750,
+        "range_medianil_desktop": 8,
+        "range_medianil_mobile": 6,
+        "select_justify": "u-justify-start",
+        "select_align": "u-items-center",
+        "range_padding_x_desktop": 0,
+        "range_padding_x_mobile": 0,
+        "range_padding_top_desktop": 0,
+        "range_padding_bottom_desktop": 20,
+        "range_padding_top_mobile": 0,
+        "range_padding_bottom_mobile": 20,
+        "range_padding_top_desktop_negative": 0,
+        "range_padding_top_mobile_negative": 0
+      }
+    },
+    "174716605707d7c14e": {
+      "type": "apps",
+      "blocks": {
+        "kueski_pay_widget_JdqCfJ": {
+          "type": "shopify://apps/kueski-pay/blocks/widget/7d6d94e0-6ce7-439c-b75d-704e092d3cb9",
+          "disabled": true,
+          "settings": {
+            "font_size": "14",
+            "text_align": "left",
+            "color_scheme": "black"
+          }
+        }
+      },
+      "block_order": [
+        "kueski_pay_widget_JdqCfJ"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_base_qydJ8g",
+    "174716605707d7c14e"
+  ]
+}

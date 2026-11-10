@@ -1,0 +1,141 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:groups.header_group.name",
+  "sections": {
+    "utility-bar": {
+      "type": "utility-bar",
+      "blocks": {
+        "announcement_XUqE4H": {
+          "type": "announcement",
+          "settings": {
+            "text": "¡ENVIOS A TODO EL MUNDO!",
+            "link": ""
+          }
+        },
+        "announcement_RDttyi": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "3 MSI EN COMPRAS MAYORES A $5,000 MXN",
+            "link": ""
+          }
+        },
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "ENVÍO NACIONAL SIN COSTO EN COMPRAS MÍNIMAS DE $3,000",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_XUqE4H",
+        "announcement_RDttyi",
+        "announcement-bar-0"
+      ],
+      "custom_css": [
+        ".utility-bar__announcement-item-content {font-size: 10.5px;}"
+      ],
+      "settings": {
+        "show_utility_bar": true,
+        "show_social_icons": true,
+        "show_locale_selector": true,
+        "show_currency_selector": false,
+        "utility_bar_animation_timing": 5
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "cdc6a829-36aa-413f-a7f3-e7aa16f67e34": {
+          "type": "mega_nav",
+          "disabled": true,
+          "settings": {
+            "dropdown_parent_link": "Categorías",
+            "featured_image_heading": "",
+            "featured_image_link_text": "",
+            "featured_image_link": "",
+            "feature_text": "<p>Conoce nuestra colección de <a href=\"/collections/must-have-jewels\" target=\"_blank\" title=\"Must Have Jewels\">Must Haves →</a></p>"
+          }
+        },
+        "e7fa361f-8076-44ea-ba18-c21f006189ca": {
+          "type": "mega_nav",
+          "disabled": true,
+          "settings": {
+            "dropdown_parent_link": "Colecciones",
+            "mega_nav_featured_image": "shopify://shop_images/foto_pagina.jpg",
+            "featured_image_heading": "Mix & Match Silver Rings",
+            "featured_image_link_text": "Comprar ahora",
+            "featured_image_link": "shopify://collections/anillos-todo",
+            "feature_text": ""
+          }
+        },
+        "header_mega_menu_mRqC7z": {
+          "type": "header_mega_menu",
+          "settings": {
+            "menu_link_title": "CATEGORIAS",
+            "menu": "men-principal-nuevo",
+            "card_text_1": "",
+            "card_link_1": "",
+            "card_text_2": "",
+            "card_link_2": "",
+            "card_text_3": "",
+            "card_link_3": ""
+          }
+        },
+        "header_mega_menu_ymE94Q": {
+          "type": "header_mega_menu",
+          "settings": {
+            "menu_link_title": "COLECCIONES",
+            "menu": "men-principal-nuevo",
+            "card_image_1": "shopify://shop_images/foto_pagina.jpg",
+            "card_text_1": "Mix & Match Silver Rings",
+            "card_link_1": "shopify://collections/anillos-todo",
+            "card_text_2": "",
+            "card_link_2": "",
+            "card_text_3": "",
+            "card_link_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "cdc6a829-36aa-413f-a7f3-e7aa16f67e34",
+        "e7fa361f-8076-44ea-ba18-c21f006189ca",
+        "header_mega_menu_mRqC7z",
+        "header_mega_menu_ymE94Q"
+      ],
+      "custom_css": [
+        "a[href*=\"season\"] {color: red !important; font-weight: bold;}"
+      ],
+      "settings": {
+        "header_style": "default",
+        "nav_position": "below_center",
+        "dropdown_interaction": "mouseover",
+        "show_cart_icon": true,
+        "show_search": true,
+        "show_search_mobile_icon": true,
+        "logo": "shopify://shop_images/logo_f7f29e0c-08c5-42c7-9386-6c84ce92d332.png",
+        "logo_max_size": 200,
+        "menu": "men-principal-nuevo",
+        "transparent_index_header_enabled": false,
+        "transparent_logo": "shopify://shop_images/Logob.png",
+        "transparent_header_foreground_color": "#ffffff",
+        "transparent_header_border_color": "rgba(0,0,0,0)",
+        "transparent_header_border_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "utility-bar",
+    "header"
+  ]
+}

@@ -1,0 +1,104 @@
+<!-- block space -->
+<!-- ATOMS: REQ-MINIMAALAI-DESARROLLO-CARRITO -->
+
+{% style %}
+	#shopify-block-{{ block.id }}{
+		display: {% if block.settings.check_view_mobile %}block{% else %}none{% endif %};
+		width: {{ block.settings.range_mobile }}%;
+		margin-bottom: {{ block.settings.range_margin_bottom_mobile }}px;
+	}
+	@media (min-width: 1024px){
+		#shopify-block-{{ block.id }}{
+			display: {% if block.settings.check_view_desktop %}block{% else %}none{% endif %};
+			width: {{ block.settings.range_desktop }}%;
+			margin-bottom: {{ block.settings.range_margin_bottom_desktop }}px;
+		}   
+	}
+{% endstyle %}
+
+
+<div class="u-block u-relative"></div>
+
+
+{% schema %}
+{
+  "name": "Space",
+  "settings": [
+		{
+			"type": "header",
+			"content": "Show",
+			"info": "Select the devices on which the block will be visible"
+		},
+		{
+			"type": "checkbox",
+			"id": "check_view_desktop",
+			"label": "Show desktop",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "check_view_mobile",
+			"label": "Show mobile",
+			"default": true
+		},
+
+		{
+			"type": "header",
+			"content": "Space column",
+			"info": "Select the space that the block will have with the adjacent blocks"
+		},
+		{
+			"type": "range",
+			"id": "range_desktop",
+			"label": "Size desktop",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "%",
+			"default": 100
+		},
+		{
+			"type": "range",
+			"id": "range_mobile",
+			"label": "Size mobile",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "%",
+			"default": 100
+		},
+		
+		{
+			"type": "header",
+			"content": "Exterior",
+			"info": "Select the exterior space of the block"
+		},
+		{
+			"type": "range",
+			"id": "range_margin_bottom_desktop",
+			"min": 0,
+			"max": 1000,
+			"step": 10,
+			"unit": "px",
+			"label": "Space exterior bottom desktop",
+			"default": 10
+		},
+		{
+			"type": "range",
+			"id": "range_margin_bottom_mobile",
+			"min": 0,
+			"max": 1000,
+			"step": 10,
+			"unit": "px",
+			"label": "Space exterior bottom mobile",
+			"default": 10
+		},
+  ],
+  "presets": [
+    {
+      "name": "Space",
+      "category": "Basics",
+    }
+  ]
+}
+{% endschema %}

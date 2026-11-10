@@ -1,0 +1,96 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "t:groups.footer_group.name",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "desktop_width": 33,
+            "desktop_padding": 0,
+            "collapse_on_mobile": false,
+            "title": "",
+            "show_title_on_desktop": true,
+            "text": "<p><strong>Contáctanos</strong></p><p><a href=\"mailto:hola@manimaalai.com\" target=\"_blank\" title=\"Envía un correo a hola@manimaalai.com\">hola@manimaalai.com</a></p><p>Tel. <a href=\"tel:+8183356259\" target=\"_blank\" title=\"tel:+8183356259\">81 8335 6259</a></p>",
+            "image_max_width": 200,
+            "image_placement": "above_text",
+            "enable_follow_on_shop": false,
+            "show_social_icons": true,
+            "whatsapp_url": "https://wa.link/jkwp4e"
+          }
+        },
+        "spacer": {
+          "type": "spacer",
+          "disabled": true,
+          "settings": {
+            "desktop_width": 10
+          }
+        },
+        "links-0": {
+          "type": "links",
+          "settings": {
+            "desktop_width": 33,
+            "desktop_padding": 0,
+            "collapse_on_mobile": true,
+            "title": "",
+            "show_title_on_desktop": true,
+            "link_list": "footer"
+          }
+        },
+        "links-1": {
+          "type": "links",
+          "settings": {
+            "desktop_width": 33,
+            "desktop_padding": 0,
+            "collapse_on_mobile": true,
+            "title": "",
+            "show_title_on_desktop": true,
+            "link_list": "clientes"
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "disabled": true,
+          "settings": {
+            "desktop_width": 30,
+            "desktop_padding": 0,
+            "collapse_on_mobile": false,
+            "title": "Newsletter",
+            "show_title_on_desktop": true,
+            "text": "<p>Suscribete a nuestro newsletter y te mantendremos informado de las ultimas promociones.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text",
+        "spacer",
+        "links-0",
+        "links-1",
+        "newsletter"
+      ],
+      "custom_css": [
+        "footer *:first-child p,footer *:first-child p {font-size: 20px !important;}"
+      ],
+      "settings": {
+        "show_locale_selector": true,
+        "show_currency_selector": false,
+        "show_payment_icons": false,
+        "show_social_icons": true
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

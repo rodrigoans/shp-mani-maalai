@@ -1,0 +1,34 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page--contact",
+      "blocks": {
+        "e157d9da-5af4-48c5-9478-c029c650af5f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sldeshow97.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "e157d9da-5af4-48c5-9478-c029c650af5f"
+      ],
+      "settings": {
+        "enable_animation": true,
+        "content_max_width": 500
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

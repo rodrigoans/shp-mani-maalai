@@ -1,0 +1,12 @@
+<a href="{{ collection.url }}" class="collection__subcollection-link">
+    <div class="collection__subcollection-image">
+        {% render 'image',
+        image: collection.image,
+        wrapper_class: 'lazyload',
+        focal_point: section.settings.focal_point,
+        disable_style: true,
+        animate: true
+        %}
+    </div>
+    <span class="collection__subcollection-title">{{ collection.title }}</span>
+</a>

@@ -1,0 +1,420 @@
+{% liquid
+  assign id = section.id
+  assign show_collection_image = section.settings.show_collection_image
+  assign show_heading = section.settings.show_heading
+  assign text_color = section.settings.text_color
+  assign show_description = section.settings.show_description
+  assign show_border = section.settings.show_border
+  assign heading_alignment = section.settings.heading_alignment
+  assign text_max_width = section.settings.text_max_width
+  assign show_small_heading = section.settings.show_small_heading
+  assign enable_carousel_mobile = section.settings.enable_carousel_mobile
+  assign modifiers = ''
+
+  if show_border
+    assign modifiers = modifiers | append: ' collection-banner--has-border'
+  endif
+
+  if settings.enable_reveal_animations and section.settings.enable_animation
+    assign modifiers = modifiers | append: ' animation animation--collection-banner'
+  endif
+
+  assign collection_heading = collection.title
+  unless show_heading
+    assign collection_heading = blank
+  endunless
+
+  assign collection_label = blank
+  if show_small_heading
+    assign collection_label = 'collections.general.collection_label' | t
+  endif
+%}
+
+<section
+  class="collection-banner{{ modifiers }}"
+  data-section-id="{{ id }}"
+  data-section-type="collection-banner"
+  data-collection-item-count="{{ collection.all_products_count }}"
+>
+  <script type="application/json" data-tags>
+    {% if collection.all_tags.size > 0 %}
+      [
+        {%- for tag in collection.all_tags -%}
+          { "label": "{{ tag | escape }}", "handle": "{{ tag | handleize }}" }
+          {%- if forloop.last == false -%}, {%- endif -%}
+        {%- endfor -%}
+      ]
+    {% else %}
+      []
+    {% endif %}
+  </script>
+
+  <style>
+    {% if show_collection_image and collection.image %}
+      .collection__image-overlay{
+        opacity: {{ section.settings.overlay_opacity | divided_by: 100.00 }};
+        background-color: {{ section.settings.overlay_color }};
+        {% if section.settings.color_overlay_gradient != blank %}
+          background: {{ section.settings.color_overlay_gradient }};
+        {% endif %}
+      }
+
+      @media (min-width: 38em) {
+        .collection__details {
+          color: {{ text_color }};
+        }
+      }
+    {% endif %}
+
+    {% if enable_carousel_mobile %}
+      @media (max-width: 749px) {
+        .collection__subcollection-carousel {
+          position: relative;
+          padding: 0 34px;
+        }
+
+        .collection__subcollection-list.collection__subcollection-list--mobile-carousel {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+          padding-bottom: 4px;
+          margin-top: 0;
+        }
+
+        .collection__subcollection-list.collection__subcollection-list--mobile-carousel::-webkit-scrollbar {
+          display: none;
+        }
+
+        .collection__subcollection-list.collection__subcollection-list--mobile-carousel .collection__subcollection {
+          flex: 0 0 auto;
+          scroll-snap-align: start;
+          white-space: nowrap;
+        }
+
+        .collection__subcollection-carousel .carousel__navigation {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 2;
+        }
+
+        .collection__subcollection-carousel .carousel__previous-button {
+          left: 0;
+        }
+
+        .collection__subcollection-carousel .carousel__next-button {
+          right: 0;
+        }
+
+        .collection__subcollection-carousel .carousel__navigation.hidden {
+          display: none;
+        }
+      }
+
+      @media (min-width: 750px) {
+        .collection__subcollection-carousel .carousel__navigation {
+          display: none;
+        }
+      }
+    {% endif %}
+  </style>
+
+  {%- if collection.all_products_count > 0 -%}
+    <div class="collection__container">
+      {% if section.settings.show_breadcrumbs %}
+        <div class="collection__breadcrumbs">
+          {% render 'breadcrumbs', show_breadcrumbs: section.settings.show_breadcrumbs %}
+        </div>
+      {% endif %}
+      <header role="banner" class="collection__header">
+        <div
+          class="
+            collection__details
+            {% if show_collection_image == false or collection.image == blank %}collection__details--no-image{% endif %}
+          "
+        >
+          {% assign collection_subheading = '' %}
+
+          {% if show_description %}
+            {% assign collection_subheading = collection.description %}
+          {% endif %}
+
+          {%
+            render 'text-block',
+            modifiers: 'animation--section-introduction',
+            heading_alignment: heading_alignment,
+            text_max_width: text_max_width,
+            overline: collection_label,
+            heading: collection_heading,
+            subheading: collection_subheading,
+            heading_tag: "h1",
+          %}
+        </div>
+
+        {% if show_collection_image and collection.image != blank %}
+          {% render 'image',
+            image: collection.image,
+            wrapper_class: 'lazyload collection__image',
+            focal_point: section.settings.focal_point,
+            disable_style: true,
+            animate: true
+          %}
+        {% endif %}
+
+        <div class="collection__image-overlay"></div>
+      </header>
+      {% if section.settings.show_subcollection %}
+      {% if enable_carousel_mobile %}
+      <div class="collection__subcollection-carousel" data-subcollection-carousel>
+        {% render 'carousel-navigation' %}
+      {% endif %}
+      <div class="collection__subcollection-list{% if enable_carousel_mobile %} collection__subcollection-list--mobile-carousel{% endif %}"{% if enable_carousel_mobile %} data-subcollection-track{% endif %}>
+        {% if section.settings.show_custom_subcollection %}
+          {% assign subcollections = collection.metafields.custom.custom_subcollection_list.value %}
+
+          {% if subcollections != blank %}    
+          <div class="collection__subcollection">
+            <a href="{{ collection.url }}" class="collection__subcollection-link">
+              <span class="collection__subcollection-title">Ver todo</span>
+            </a>
+          </div>
+          {% endif %}
+
+          {% if subcollections != blank %}
+            {% for subcollection in subcollections %}
+              <div class="collection__subcollection">
+                {% render 'collection-subcollection-custom', collection: subcollection %}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% else %}
+          {% assign subcollections = collection.metafields.custom.subcollection_list.value %}
+
+          {% if subcollections != blank %}          
+            <div class="collection__subcollection">
+              <a href="{{ collection.url }}" class="collection__subcollection-link">
+                <span class="collection__subcollection-title">Ver todo</span>
+              </a>
+            </div>
+          {% endif %}
+
+          {% if subcollections != blank %}
+            {% for subcollection in subcollections %}
+              <div class="collection__subcollection">
+                {% render 'collection-subcollection', collection: subcollection %}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+      </div>
+      {% if enable_carousel_mobile %}
+      </div>
+      {% endif %}
+      {% endif %}
+    </div>
+  {%- else -%}
+    <div class="collection__empty ta-c">
+      {%
+        render 'text-block',
+        modifiers: 'animation--section-introduction',
+        heading_alignment: heading_alignment,
+        text_max_width: text_max_width,
+        overline: collection_label,
+        heading: collection_heading,
+        subheading: collection_subheading,
+      %}
+      <p class="fs-body-base mb0">{{ 'collections.general.no_matches' | t }}</p>
+      <a class="btn btn--text-link" href="{{ routes.all_products_collection_url }}">
+        {{- 'cart.general.continue_shopping' | t -}}
+      </a>
+    </div>
+  {%- endif -%}
+</section>
+
+{% if enable_carousel_mobile %}
+  <script>
+    (() => {
+      const section = document.querySelector('[data-section-id="{{ id }}"]');
+      if (!section) return;
+
+      const track = section.querySelector('[data-subcollection-track]');
+      const previousButton = section.querySelector('.collection__subcollection-carousel .carousel__previous-button');
+      const nextButton = section.querySelector('.collection__subcollection-carousel .carousel__next-button');
+      if (!track || !previousButton || !nextButton) return;
+
+      const mobileQuery = window.matchMedia('(max-width: 749px)');
+
+      const updateButtons = () => {
+        if (!mobileQuery.matches) {
+          previousButton.classList.add('hidden');
+          nextButton.classList.add('hidden');
+          return;
+        }
+
+        const maxScrollLeft = track.scrollWidth - track.clientWidth;
+        const hasOverflow = maxScrollLeft > 1;
+
+        previousButton.classList.toggle('hidden', !hasOverflow || track.scrollLeft <= 1);
+        nextButton.classList.toggle('hidden', !hasOverflow || track.scrollLeft >= maxScrollLeft - 1);
+      };
+
+      const scrollByStep = (direction) => {
+        const step = Math.max(track.clientWidth * 0.8, 120);
+        track.scrollBy({ left: direction * step, behavior: 'smooth' });
+      };
+
+      previousButton.addEventListener('click', () => scrollByStep(-1));
+      nextButton.addEventListener('click', () => scrollByStep(1));
+      track.addEventListener('scroll', updateButtons, { passive: true });
+      window.addEventListener('resize', updateButtons);
+      mobileQuery.addEventListener('change', updateButtons);
+
+      updateButtons();
+    })();
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "t:sections.collection_banner.name",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:shared.settings.section_style.style_header.content"
+    },
+    {
+      "id": "enable_animation",
+      "type": "checkbox",
+      "label": "t:shared.settings.section_style.enable_animation.label",
+      "info": "t:shared.settings.section_style.enable_animation.info",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:shared.settings.content_header.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumbs",
+      "label": "t:shared.settings.show_breadcrumbs.label",
+      "default": false
+    },
+    {
+      "id": "show_collection_image",
+      "type": "checkbox",
+      "label": "t:sections.collection_banner.settings.show_collection_image.label",
+      "default": true
+    },
+    {
+      "id": "focal_point",
+      "type": "select",
+      "label": "t:sections.collection_banner.settings.focal_point.label",
+      "options": [{"label":"t:shared.settings.focal_point.options__0.label","value":"image_presentation"},{"label":"t:shared.settings.focal_point.options__1.label","value":"left_top"},{"label":"t:shared.settings.focal_point.options__2.label","value":"center_top"},{"label":"t:shared.settings.focal_point.options__3.label","value":"right_top"},{"label":"t:shared.settings.focal_point.options__4.label","value":"left_center"},{"label":"t:shared.settings.focal_point.options__5.label","value":"center_center"},{"label":"t:shared.settings.focal_point.options__6.label","value":"right_center"},{"label":"t:shared.settings.focal_point.options__7.label","value":"left_bottom"},{"label":"t:shared.settings.focal_point.options__8.label","value":"center_bottom"},{"label":"t:shared.settings.focal_point.options__9.label","value":"right_bottom"}],
+      "default": "image_presentation"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "t:sections.collection_banner.settings.overlay_opacity.label",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "t:sections.collection_banner.settings.overlay_color.label",
+      "default": "#000000"
+    },
+    {
+      "id": "color_overlay_gradient",
+      "type": "color_background",
+      "label": "t:shared.settings.color.color_overlay_gradient.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.collection_banner.settings.text_color.label",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.collection_banner.settings.heading_header.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_border",
+      "label": "t:sections.collection_banner.settings.show_border.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "t:sections.collection_banner.settings.show_heading.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_small_heading",
+      "label": "t:sections.collection_banner.settings.show_small_heading.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "t:sections.collection_banner.settings.show_description.label",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "t:sections.collection_banner.settings.heading_alignment.label",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.collection_banner.settings.heading_alignment.option_1"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.collection_banner.settings.heading_alignment.option_2"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "label": "t:sections.collection_banner.settings.text_max_width.label",
+      "min": 16,
+      "max": 50,
+      "step": 1,
+      "default": 38
+    },
+    {
+      "type": "header",
+      "content": "t:sections.subcollection_list.settings.heading_header.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_carousel_mobile",
+      "label": "t:sections.subcollection_list.settings.enable_carousel_mobile.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_subcollection",
+      "label": "t:sections.subcollection_list.settings.show_subcollection.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_custom_subcollection",
+      "label": "t:sections.subcollection_list.settings.show_custom_subcollection.label",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

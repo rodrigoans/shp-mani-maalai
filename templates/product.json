@@ -1,0 +1,192 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_text_size": 33
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_text_size": 14
+          }
+        },
+        "judge_me_reviews_preview_badge_qh76Yh": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "kueski_pay_widget_Qy3MRX": {
+          "type": "shopify://apps/kueski-pay/blocks/widget/7d6d94e0-6ce7-439c-b75d-704e092d3cb9",
+          "disabled": true,
+          "settings": {
+            "font_size": "14",
+            "text_align": "left",
+            "color_scheme": "black"
+          }
+        },
+        "size_guide_9Tr7Fi": {
+          "type": "size-guide",
+          "settings": {
+            "text": "Guía de tallas"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_popup_option": "",
+            "variant_popup_text": "",
+            "variant_popup_page": ""
+          }
+        },
+        "disponibilidad_G3EDij": {
+          "type": "disponibilidad",
+          "settings": {
+            "umbral": "5",
+            "mensaje": "Quedan pocas piezas",
+            "select_alignment_desktop": "center",
+            "select_alignment_mobile": "center",
+            "select_font": "body",
+            "select_font_weight": "normal",
+            "select_size_desktop": 16,
+            "select_size_mobile": 16,
+            "select_color": "#000000"
+          }
+        },
+        "inventory_counter": {
+          "type": "inventory_counter",
+          "disabled": true,
+          "settings": {
+            "show_label": true,
+            "inventory_max": "5",
+            "low_inventory_threshold": "1",
+            "show_untracked_quantity": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "free_shipping_bar_RmcCKQ": {
+          "type": "free_shipping_bar",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "style": "open"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "judge_me_reviews_preview_badge_qh76Yh",
+        "kueski_pay_widget_Qy3MRX",
+        "size_guide_9Tr7Fi",
+        "variant_picker",
+        "disponibilidad_G3EDij",
+        "inventory_counter",
+        "buy_buttons",
+        "free_shipping_bar_RmcCKQ",
+        "description"
+      ],
+      "custom_css": [
+        ".product__description {font-size: 13px;}",
+        ".accordion__label {font-size: 18px;}",
+        ".inventory-counter__label {font-size: 16px;}",
+        ".inventory-counter__message {font-size: 12px;}"
+      ],
+      "settings": {
+        "enable_animation": true,
+        "show_breadcrumbs": true,
+        "show_navigation_buttons": false,
+        "enable_full_width": true,
+        "image_size": "50",
+        "enable_thumbnails": false,
+        "thumbnail_position": "vertical",
+        "thumbnail_size": "small",
+        "thumbnail_aspect_ratio": "square",
+        "enable_video_looping": false,
+        "enable_gift_card_recipient": false
+      }
+    },
+    "1747165489e4e39e77": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_etUbtd": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": true,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_etUbtd"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "product_recommendations_ARJ4Wd": {
+      "type": "product-recommendations",
+      "settings": {
+        "enable_animation": true,
+        "columns": 4,
+        "columns_mobile": "1",
+        "aspect_ratio": "global",
+        "overline": "",
+        "title": "También te puede gustar",
+        "subheading": "",
+        "text_max_width": 36
+      }
+    },
+    "featured_collection_MDrr6U": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "collection": "joyeria-best-sellers",
+        "columns": 3,
+        "columns_mobile": "1",
+        "aspect_ratio": "global",
+        "text_position": "center",
+        "overline": "",
+        "title": "Best-Sellers",
+        "subheading": "",
+        "link_text": "",
+        "text_max_width": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1747165489e4e39e77",
+    "product_recommendations_ARJ4Wd",
+    "featured_collection_MDrr6U"
+  ]
+}

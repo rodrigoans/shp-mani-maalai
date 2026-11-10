@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "custom_css": [
+        "h1 {font-size: 40px;}"
+      ],
+      "settings": {
+        "enable_animation": true,
+        "show_breadcrumbs": true,
+        "show_collection_image": false,
+        "focal_point": "image_presentation",
+        "overlay_opacity": 20,
+        "overlay_color": "#000000",
+        "color_overlay_gradient": "",
+        "text_color": "#ffffff",
+        "show_border": false,
+        "show_heading": true,
+        "show_small_heading": true,
+        "show_description": true,
+        "heading_alignment": "center",
+        "text_max_width": 38
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [],
+      "settings": {
+        "enable_animation": true,
+        "show_sort": true,
+        "show_filters": true,
+        "show_filter_swatches": true,
+        "show_filter_chips": false,
+        "filter_style": "buttons",
+        "collapse_filter_groups": true,
+        "show_swatches": true,
+        "products_per_row": 4,
+        "products_per_row_mobile": 2,
+        "aspect_ratio": "square",
+        "text_alignment": "center",
+        "per_page": 12,
+        "pagination": "infinite"
+      }
+    },
+    "collection_list_db8XPk": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_rQjKBm": {
+          "type": "collection",
+          "settings": {
+            "collection": "arcane-coleccion-de-joyeria"
+          }
+        },
+        "collection_mCBJ4C": {
+          "type": "collection",
+          "settings": {
+            "collection": "eterea-coleccion-de-joyeria"
+          }
+        },
+        "collection_HVygaz": {
+          "type": "collection",
+          "settings": {
+            "collection": "introspeccion-coleccion-de-joyeria"
+          }
+        },
+        "collection_CijwbB": {
+          "type": "collection",
+          "settings": {
+            "collection": "cosmica-joyeria"
+          }
+        },
+        "collection_NWyPGz": {
+          "type": "collection",
+          "settings": {
+            "collection": "instinto-coleccion-de-joyeria"
+          }
+        },
+        "collection_Mx6Xe6": {
+          "type": "collection",
+          "settings": {
+            "collection": "basicos-joyeria"
+          }
+        }
+      },
+      "block_order": [
+        "collection_rQjKBm",
+        "collection_mCBJ4C",
+        "collection_HVygaz",
+        "collection_CijwbB",
+        "collection_NWyPGz",
+        "collection_Mx6Xe6"
+      ],
+      "custom_css": [
+        ".collection-list__product-count {display: none;}"
+      ],
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "columns": 3,
+        "columns_mobile": "2",
+        "aspect_ratio": "portrait",
+        "text_position": "top_center",
+        "overline": "COMPRA POR COLECCIÓN",
+        "title": "DESCUBRE TODAS NUESTRAS COLECCIONES",
+        "subheading": "",
+        "text_max_width": 43
+      }
+    },
+    "rich_text_y9iYGg": {
+      "type": "rich-text",
+      "blocks": {
+        "text_pKKd9w": {
+          "type": "text",
+          "settings": {
+            "text": "<p>En Mani Maalai, los aretes tipo stud son un clásico infalible: delicados pero con carácter, son esenciales para crear combinaciones únicas en tu stack de orejas. Ya sea que busques algo sutil y brillante como un stud con cuarzo o algo más atrevido y geométrico, aquí encontrarás tus nuevos favoritos.</p><p>Nuestra colección incluye diseños que van más allá de lo convencional: desde studs con perlas y topacios cuidadosamente montados, hasta piezas inspiradas en la naturaleza, como nuestros aretes con forma de marquise en aguamarina, perfectos para un look fresco y etéreo.</p><p>También contamos con diseños con pavé de piedras naturales que capturan la luz con elegancia, como nuestros studs con forma de barra o wishbone, hechos a mano con dedicación y detalle.</p><p>Explora nuestra colección de aretes tipo stud en oro de 14k, piedras naturales y diseños únicos hechos en México. Una joya pequeña puede tener un gran impacto cuando refleja tu esencia.</p>",
+            "text_max_width": 50
+          }
+        }
+      },
+      "block_order": [
+        "text_pKKd9w"
+      ],
+      "custom_css": [
+        ".rich-text {font-size: 12px;}"
+      ],
+      "settings": {
+        "section_style": "default",
+        "section_padding": "regular",
+        "enable_animation": true,
+        "alignment": "center"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "collection_list_db8XPk",
+    "rich_text_y9iYGg"
+  ]
+}

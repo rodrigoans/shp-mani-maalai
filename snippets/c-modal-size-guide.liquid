@@ -1,0 +1,155 @@
+<!-- ATOMS: REQ-GUIA-DE-TALLAS START -->
+<!-- c-modal-size-guide -->
+
+{% style %}
+
+.c-modal-size-guide__back{
+	z-index: 100000;
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.25);
+
+	transition: opacity 0.15s ease-in-out;
+}
+.c-modal-size-guide__back.is-open{
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.c-modal-size-guide__wrapper{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.c-modal-size-guide{
+	z-index: 100000;
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 335px;
+	height: 100%;
+	background: #fff;
+	box-shadow: var(--shadow-3);
+
+	transform: translateX(100%);
+	transition: transform 0.3s ease;
+}
+@media (min-width: 920px){
+	.c-modal-size-guide{
+		width: 500px;	
+	}
+}
+
+.c-modal-size-guide.is-open{
+	transform: translateX(0);
+}
+
+.c-modal-size-guide__header{
+	display: block;
+	position: relative;
+    padding: .8rem 2rem;
+    border-bottom: 1px solid var(--color-drawer-border);
+}
+@media (min-width: 920px){
+	.c-modal-size-guide__header{
+    	padding: .8rem 2.5rem;
+	}
+}
+.c-modal-size-guide__close{
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 2rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+
+.c-modal-size-guide__body{
+	overflow-y: hidden;
+	display: block;
+	position: relative;
+	width: 100%;
+    padding: 1.5rem 2rem;
+	background: #fff;
+}
+@media (min-width: 920px){
+	.c-modal-size-guide__body{
+    	padding: 1.5rem 2.5rem;
+	}
+}
+
+.c-modal-size-guide__img{
+	position: relative;
+	width: 100%;
+	height: auto;
+    object-fit: contain;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.c-modal-size-guide__body .c-modal-size-guide__available{
+	display: none;
+}
+
+
+
+/* ATOMS: REQ-GUIA-DE-TALLAS-v2 START */
+.c-modal-size-guide__body-wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+.c-modal-size-guide__body-internal{
+	display: block;
+	position: relative;
+	overflow-y: auto;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+
+	width: 100%;
+}
+.c-modal-size-guide__body-internal::-webkit-scrollbar {
+	display: none;  /* Chrome, Safari, Opera */
+}
+
+.c-modal-size-guide__body-footer{
+	display: block;
+	position: relative;
+    padding: 2rem 8px 0 8px;
+}
+
+.c-modal-size-guide__btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	width: 100%;
+}
+.c-modal-size-guide__btn img{
+	width: 15px;
+	height: 15px;
+}
+/* ATOMS: REQ-GUIA-DE-TALLAS-v2 END */
+
+
+
+/* Keep only the last block that contains an available size-guide */
+/*
+.c-modal-size-guide__body .shopify-block:has(.c-modal-size-guide__available):not(:has(~ .shopify-block .c-modal-size-guide__available)) .c-modal-size-guide__available{
+	display: block;
+}
+*/
+
+{% endstyle %}
+
+<!-- ATOMS: REQ-GUIA-DE-TALLAS END -->

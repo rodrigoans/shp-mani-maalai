@@ -1,0 +1,47 @@
+<!-- ATOMS: REQ-GUIA-DE-TALLAS-v2 START -->
+<!-- modal--size-guide -->
+
+{% render 'c-modal-size-guide' %}
+
+<div 
+	class="c-modal-size-guide__back"
+
+	js-element-modal-size-guide--backdrop
+	onclick="document.querySelector('element-modal-size-guide').clickClose()"
+></div>
+
+<element-modal-size-guide class="c-modal-size-guide">
+	<div class="c-modal-size-guide__wrapper">
+		<div class="c-modal-size-guide__header">
+			<h2>Guia de tallas</h2>
+			<button
+				class="c-modal-size-guide__close"
+				onclick="document.querySelector('element-modal-size-guide').clickClose()"
+			>
+				{% render 'icon-close' %}
+			</button>
+		</div>
+		<div class="c-modal-size-guide__body">
+
+			{% for block in section.blocks %}
+				{% render block, product: product %}
+			{% endfor %}
+
+		</div>
+	</div>
+
+</element-modal-size-guide>
+
+{% schema %}
+{
+	"name": "Modal size guide",
+	"limit": 1,
+	"settings": [
+	],
+	"blocks": [
+		{ "type": "_modal-category" }
+	]
+}
+{% endschema %}
+
+<!-- ATOMS: REQ-GUIA-DE-TALLAS-v2 END -->

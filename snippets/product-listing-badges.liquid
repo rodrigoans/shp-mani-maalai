@@ -1,0 +1,87 @@
+{% liquid
+  comment
+    Renders product badges for the product cards.
+
+    Required parameters:
+      - product: { Object } The associated product object.
+      - show_sale_badge: { Boolean } Whether to show the "Sale" badge.
+      - show_sold_out_badge: { Boolean } Whether to show the "Sold-out" badge.
+        - If the "Sold-out" badge should show (ie. is enabled, and the product is sold out),
+            then no other badges will show.
+      - show_custom_badges: { Boolean } Whether to show any custom badges.
+  endcomment
+
+  assign is_on_sale = false
+  if show_sale_badge and product.compare_at_price > product.price and product.available
+    assign is_on_sale = true
+  endif
+
+  # Get custom badges
+  for i in (1..4)
+    assign setting_key = 'custom_product_badge_group_[[index]]_tag_names' | replace: '[[index]]', i
+    assign current_tags = settings[setting_key] | split: ','
+    assign stripped_tags = ''
+
+    if current_tags != blank
+      for tag in current_tags
+        assign stripped_tag = tag | strip
+        assign stripped_tags = stripped_tags | append: stripped_tag
+
+        unless forloop.last
+          assign stripped_tags = stripped_tags | append: ','
+        endunless
+      endfor
+
+      assign stripped_tags = stripped_tags | split: ','
+      assign badge_tags = badge_tags | concat: stripped_tags
+    endif
+  endfor
+
+  assign is_sold_out = false
+  if show_sold_out_badge
+    unless product.available
+      assign is_sold_out = true
+    endunless
+  endif
+
+  if is_sold_out
+    assign badge_text = 'products.product.sold_out' | t
+    # Output "Sold-out" badge
+    capture badges
+      render 'product-listing-badge', text: badge_text, type: 'sold'
+    endcapture
+  else
+    # Output custom badges
+    if show_custom_badges
+      for badge_tag in badge_tags
+        for product_tag in product.tags
+          assign product_tag_handle = product_tag | handleize
+          assign badge_tag_handle = badge_tag | handleize
+
+          if product_tag_handle == badge_tag_handle
+            capture badges
+              echo badges
+              render 'product-listing-badge', text: badge_tag, handle: badge_tag_handle, type: 'custom'
+            endcapture
+            break
+          endif
+        endfor
+      endfor
+    endif
+  endif
+
+  if is_on_sale
+    assign badge_text = 'products.product.on_sale' | t
+    # Output "Sale" badge
+    capture badges
+      echo badges
+      render 'product-listing-badge', text: badge_text, type: 'sale'
+    endcapture
+  endif
+%}
+
+{%- if badges != blank -%}
+  <div class="product-badges absolute top-0 right-0 mt3 mr3">
+    {{ badges }}
+  </div>
+{%- endif -%}

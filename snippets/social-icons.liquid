@@ -1,0 +1,38 @@
+{%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, TikTok, Tumblr, YouTube, Vimeo, LinkedIn,' | split: ', ' -%}
+
+<ul class="list ma0 pa0">
+  {%- for social in social_accounts -%}
+    {%- assign social_handle = social | handleize -%}
+    {%- capture social_link -%}social_{{ social_handle }}_link{%- endcapture -%}
+    {%- capture social_icon -%}icon-{{ social_handle }}{%- endcapture -%}
+
+    {%- if settings[social_link] != blank -%}
+      <li class="dib ph1">
+        <a 
+          href="{{ settings[social_link] }}"
+
+          {% comment %} ATOMS: REQ-WHATSAPP-WALINK START {% endcomment %}
+          target="_blank"
+          rel="noopener noreferrer"
+          {% comment %} ATOMS: REQ-WHATSAPP-WALINK END {% endcomment %}
+
+          title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}"
+        >
+          {% render 'icon-social-icons' with icon, icon: social_handle, width: width, height: height %}
+        </a>
+      </li>
+    {%- endif -%}
+
+  {%- endfor -%}
+</ul>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'icon-social-icons' with icon: social_handle width: width height:
+    height %}"
+  to: "{% render 'icon-social-icons' with icon, icon: social_handle, width: width,
+    height: height %}"
+  position: 874..967
+{%- endcomment -%}

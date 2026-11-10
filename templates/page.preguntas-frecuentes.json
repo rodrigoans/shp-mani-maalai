@@ -1,0 +1,166 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "enable_animation": true,
+        "content_max_width": 700
+      }
+    },
+    "collapsible_row_list_BACTHq": {
+      "type": "collapsible-row-list",
+      "blocks": {
+        "item_KbHCfD": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿Cómo hago una compra?",
+            "content": "<p>1. Entra a la página del producto que quieras adquirir, cuando sea necesario selecciona la talla o acabado de tu preferencia y agrega los productos a tu carrito de compra.</p><p>2. Cuando tu orden esté completa da clic en Ir al carrito, esto te llevará a una página donde podrás revisar las piezas que has agregado y te permitirá escribir un mensaje en el caso que sea para regalo.</p><p>3. Da clic en Checkout y en la página siguiente podrás llenar tus datos de envío. Una vez que llenes los campos necesarios da clic en continuar con envíos. </p><p>4. Aquí deberás elegir el tipo de envío de tu preferencia y después da clic en continuar con el pago.</p><p>5. Elige una opción de pago de las presentadas y da clic en finalizar pedido.</p><p>6. Una vez que el pago sea autorizado te deberá llegar un email de confirmación.<br/></p><p>Recuerda que las piezas que no están en existencia tardan aproximadamente 14 días hables en su producción y envío.</p>"
+          }
+        },
+        "item_nyXrak": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿Para qué sirve registrarse?",
+            "content": "<p>Aunque puedes realizar compras sin necesidad de registrarte, la opción de registro te permitirá guardar distintas direcciones y formas de pago.</p>"
+          }
+        },
+        "item_ThnJPb": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿Cuáles son las formas de pago?",
+            "content": "<p>Puedes realizar tu pago con cualquier tarjeta de crédito o débito Visa, Master Card, American Express o bien por medio de PayPal.</p>"
+          }
+        },
+        "item_m3c8cG": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿Cómo aplico un código de descuento?",
+            "content": "<p>Para aplicar un código de descuento, al momento de hacer el checkout en tu compra automáticamente te dará la opción ingresar el código en el caso de computadoras en el lado izquierdo de la pantalla o en móvil dando clic en mostrar resumen de pedido o bien en la pantalla de pago.</p>"
+          }
+        },
+        "item_HjzXDn": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿Se puede comprar desde cualquier lugar?",
+            "content": "<p>Por el momento sólo se pueden hacer compras para el interior de la república Mexicana, Estados Unidos, Canadá, España, Italia, Francia y Reino Unido a través de nuestra página, si deseas comprar desde cualquier otro país escríbenos a <a href=\"mailto:hola@manimaalai.com\" target=\"_blank\">hola@manimaalai.com</a> o bien envíanos un mensaje en <a href=\"https://www.instagram.com/manimaalai/\" target=\"_blank\" title=\"Instagram Mani Maalai\">instagram</a> (@manimaalai) para gestionar tú compra.</p>"
+          }
+        },
+        "item_R9YRch": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿Cuál es el costo de envío?",
+            "content": "<p>Envío nacional estándar - 2 a 6 días hábiles - $190</p><p>Envío nacional exprés - 1 a 2 días hábiles - $280</p><p>Envío Estados Unidos - 3 a 7 días hábiles - $490</p><p>Envío Canadá - 15 días hábiles - $1,1507</p><p>Envío Europa (España, Italia, Francia y Reino Unido) - 15 días hábiles - $1,350</p><p> </p><p>En compras iguales o mayores a $3,000 pesos el <strong>envío nacional es sin costo.</strong></p><p>El envío exprés será procesado <strong>si la pieza está en existencia </strong>de lo contrario su tiempo de producción es de 14 días hábiles.</p>"
+          }
+        },
+        "item_afpn74": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿Cuánto tiempo tarda en llegar mi compra?",
+            "content": "<p>Una vez que hayas hecho tu compra, tu orden puede tardar hasta 72 horas en ser procesada. Si tus joyas se encuentran en existencia, el tiempo estimado de entrega es de 1-4 días hábiles, de lo contrario debido a su tiempo de producción el tiempo estimado de entrega es de 14 días hábiles.<br/>En caso de solicitar la entrega en una fecha precisa o consultar la existencia de una pieza envíanos un email a hola@manimaalai.com llámanos al +52 81 8335 6259 (horario: de lunes a sábado de 10 am a 8 pm).<br/></p><p><em>Días hábiles de lunes a viernes</em>.</p>"
+          }
+        },
+        "item_wfXTDH": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿Qué servicio de paquetería usa MANI MALAI?",
+            "content": "<p>Todos nuestros envíos los realizamos a través del servicio de FedEx o DHL.</p>"
+          }
+        },
+        "item_dE7wwd": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿Cómo comprobar si la compra se ha realizado correctamente?",
+            "content": "<p>Siempre enviamos un correo electrónico de confirmación, en caso de no recibirlo, envíanos un email a  <a href=\"mailto:hola@manimaalai.com\" target=\"_blank\">hola@manimaalai.com</a> o llámanos al +52 81 8335 6259 (horario: de lunes a sábado de 10 am a 8 pm). En el menor tiempo posible nos pondremos en contacto para solucionar la incidencia.</p>"
+          }
+        },
+        "item_fCwXrE": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿Cómo gestiono un cambio o devolución?",
+            "content": "<p>Sabemos que es difícil comprar cuando no conoces físicamente el producto. Confiamos en que nuestras piezas te encantarán y para tu tranquilidad te ofrecemos una devolución por cambio de producto sí la pieza no fue de tu agrado. En caso de querer hacer un cambio, favor de notificarlo dentro de los primeros 15 días de recibir el producto a hola@manimaalai.com.</p><p><br/>Nota: Es importante no retirar la etiqueta del producto. Todas las ventas son finales. MANI MAALAI sólo hace cambios por mercancía y no hace reembolsos.Para más información visita nuestra sección de Cambios</p>"
+          }
+        },
+        "item_W6WKwp": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿El producto que compre será igual al que veo en la foto?",
+            "content": "<p>Las fotografías que aparecen en la Web responden fielmente a los productos, pero hay que tener en cuenta que se realizan en alta calidad con el objetivo de reflejar con máximo detalle cada joya. En algunos casos, el cliente podría encontrar diferencias en aquellos productos en los que la propia materia prima y su proceso de fabricación influyan en el resultado final, como por ejemplo los productos fabricados artesanalmente. <br/>En ocasiones, es posible que haya diferencias en los colores y detalles dependiendo del monitor desde el que esté viendo nuestra página Web. Además, cuando una pieza cuenta con gemas hay que tener en cuenta que son naturales y por lo tanto cada gema es única y entre ellas existen mínimas variaciones de tamaño, color y brillo.</p>"
+          }
+        },
+        "item_TyNzMU": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿Qué se debe hacer en caso de recibir un producto defectuoso o diferente al solicitado?",
+            "content": "<p>Si recibiste un pieza dañada o diferente a la adquirida debes notificarlo a <a href=\"mailto:hola@manimaalai.com\" target=\"_blank\">hola@manimaalai.com</a> o al teléfono (81) 83-35-62-59 (horario: lunes a sábado de 10 am a 8 pm). Este reporte debe de recibirse dentro de las primeras 24 horas de haber recibido el producto. Nos pondremos en contacto contigo en el menor tiempo posible.<br/>Para más información visita nuestra sección de Cambios</p>"
+          }
+        },
+        "item_gnanrU": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿Cuánto tiempo de garantía tienen las joyas de MANI MAALAI?",
+            "content": "<p>Todas las joyas MANI MAALAI cuentan con una garantía de 3 meses a partir de la fecha de compra ante defectos de fabricación.</p>"
+          }
+        },
+        "item_6qTFJm": {
+          "type": "item",
+          "settings": {
+            "style": "closed",
+            "heading": "¿Qué hago si mi joya requiere mantenimiento o reparación?",
+            "content": "<p>Si deseas hacer alguna reparación o mantenimiento de tu pieza, envíanos un mensaje con la foto del producto a  <a href=\"mailto:hola@manimaalai.com\" target=\"_blank\">hola@manimaalai.com</a> MANI MAALAI no hace reparación de piezas que no sean de la marca.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_KbHCfD",
+        "item_nyXrak",
+        "item_ThnJPb",
+        "item_m3c8cG",
+        "item_HjzXDn",
+        "item_R9YRch",
+        "item_afpn74",
+        "item_wfXTDH",
+        "item_dE7wwd",
+        "item_fCwXrE",
+        "item_W6WKwp",
+        "item_TyNzMU",
+        "item_gnanrU",
+        "item_6qTFJm"
+      ],
+      "settings": {
+        "section_max_width": 800,
+        "enable_animation": true,
+        "section_style": "default",
+        "title": "Preguntas Frecuentes",
+        "text_max_width": 53
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collapsible_row_list_BACTHq"
+  ]
+}

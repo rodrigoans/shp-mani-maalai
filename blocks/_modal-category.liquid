@@ -1,0 +1,113 @@
+<!-- ATOMS: REQ-GUIA-DE-TALLAS-v2 START -->
+<!-- block _modal-category -->
+
+{% assign category_name = block.settings.category_name | strip %}
+{% assign tag_name = block.settings.tag_name | strip %}
+
+{% assign is_category_match = false %}
+{% if category_name != blank and product.category and product.category.name == category_name %}
+  {% assign is_category_match = true %}
+{% endif %}
+
+{% assign is_tag_match = false %}
+{% if tag_name != blank and product.tags.size > 0 %}
+  {% assign tag_name_downcase = tag_name | downcase %}
+  {% for product_tag in product.tags %}
+    {% assign product_tag_downcase = product_tag | downcase %}
+    {% if product_tag_downcase == tag_name_downcase %}
+      {% assign is_tag_match = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% style %}
+	#shopify-block-{{ block.id }}{
+    {% if is_category_match or is_tag_match %}
+      height: 100%;
+    {% endif %}
+	}
+{% endstyle %}
+
+
+{% if is_category_match or is_tag_match %}
+
+  <div style="height: 100%;" class="u-relative {% if is_category_match or is_tag_match %}c-modal-size-guide__available{% endif %}">
+    <div class="c-modal-size-guide__body-wrapper">
+
+      <div class="c-modal-size-guide__body-internal">
+        {% for block_lv2 in block.blocks %}
+          {% style %}
+            #shopify-block-{{ block_lv2.id }}{
+              padding-left: 8px;
+              padding-right: 8px;
+            }
+          {% endstyle %}
+          {% render block_lv2, product: product %}
+        {% endfor %}
+      </div>
+
+      {% if block.settings.download_file != blank %}
+        <div class="c-modal-size-guide__body-footer">
+          <a
+            href="{{ block.settings.download_file }}"
+            target="_blank"
+            alt="DESCARGA EL ARCHIVO"
+            class="product-item__quick-shop-button active bttn c-modal-size-guide__btn"
+          >
+            <span>DESCARGA EL ARCHIVO</span>
+            {% render 'icon-download' %}
+          </a>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+  {% style %}
+  .c-button--size-guide{
+      display: block !important;
+  }
+  {% endstyle %}
+
+{% endif %}
+
+
+{% schema %}
+{
+  "name": "Category",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Category",
+      "info": "Select the category and/or tag, then upload mobile and desktop images. This block displays if product category OR product tag matches."
+    },
+    {
+      "type": "text",
+      "id": "category_name",
+      "label": "Category Name"
+    },
+    {
+      "type": "text",
+      "id": "tag_name",
+      "label": "Tag Name"
+    },
+		{
+			"type": "url",
+			"id": "download_file",
+			"label": "Download file"
+		}
+  ],
+	"blocks": [
+		{ "type": "group" }
+	],
+  "presets": [
+    {
+      "name": "Category",
+      "category": "Modals",
+    }
+  ]
+}
+{% endschema %}
+
+<!-- ATOMS: REQ-GUIA-DE-TALLAS-v2 END -->
