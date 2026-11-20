@@ -1,0 +1,71 @@
+@use "../abstracts" as *;
+
+header {
+    background: lime;
+
+    .utility-bar {
+        width: 100%;
+        display: flex;
+
+        .utlity-bar__social-icons {
+            width: 30%;
+            background: $color-black;
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+
+                li {
+                    list-style: none;
+                    margin: 0 3px;
+
+                    a {
+                        svg {
+                            fill: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .utility-bar__announcements-container {
+            background: $color-black;
+            text-align: center;
+            width: 70%;
+            position: relative;
+            overflow: hidden;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .utility-bar__announcement-item {
+                color: $color-white;
+                position: absolute;
+                inset: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                opacity: 0;
+                transform: translateY(8px);
+                transition: opacity 0.5s ease, transform 0.5s ease;
+                pointer-events: none;
+
+                &[aria-hidden="false"] {
+                    opacity: 1;
+                    transform: translateY(0);
+                    pointer-events: auto;
+                    position: relative;
+                }
+            }
+        }
+
+        .utility-bar__disclosure-container {
+            display: none;
+            background: navy;
+        }
+    }
+}

@@ -7263,13 +7263,7 @@ select{
 :root{
   --utility-bar-height:40px;
 }
-.utility-bar-section{
-  z-index:calc(300 + 1);
-  z-index:calc(var(--z-index-header) + 1);
-  position:relative;
-  order:-1;
-  margin-left:-1px;
-}
+
 .utility-bar-section .flickity-slider{
     transform:none !important;
   }

@@ -1,0 +1,9 @@
+@use 'abstracts';
+@use 'config';
+
+
+// Componentes
+@use 'components/footer';
+@use 'components/header';
+
+@use 'layouts/general-to-clean'
