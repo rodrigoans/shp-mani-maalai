@@ -5514,14 +5514,7 @@ select{
 .z-unset{
   z-index:unset;
 }
-.footer{
-  background-color:var(--color-footer-bg);
-  color:var(--color-footer-text);
-  padding-top:calc(4px * 10);
-  padding-top:var(--spacing-extra-large);
-  padding-bottom:calc(4px * 10);
-  padding-bottom:var(--spacing-extra-large)
-}
+
 @media (min-width: 60em){
 .footer{
     padding-top:calc(4px * 20);

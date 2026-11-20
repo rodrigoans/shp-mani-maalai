@@ -80,7 +80,7 @@
         "newsletter"
       ],
       "custom_css": [
-        "footer *:first-child p,footer *:first-child p {font-size: 20px !important;}"
+        "footer *:first-child p,footer *:first-child p {font-size: 14px !important;}"
       ],
       "settings": {
         "show_locale_selector": true,

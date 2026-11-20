@@ -34,6 +34,12 @@
     display: inline-block;
   }
 
+  /* ATOMS: FIX-CART-PROGRESS-BAR START */
+  .progress-bar__text .price-bar {
+    white-space: nowrap;
+  }
+  /* ATOMS: FIX-CART-PROGRESS-BAR END */
+
   .progress-bar__wrapper {
     width: 100%;
     height: 10px;
@@ -71,7 +77,7 @@
       <div class="progress-bar__wrapper">
           <div class="progress-bar__fill" style="width: {{ progress_percentage_total }}%"></div>
       </div>
-      <div class="progress-bar__text">{{ progress_text[0] }} <strong class="js-subtotal-product" data-free-shipping-limit="{{ free_shipping_limit }}">{{ free_shipping_limit | minus: current_price | times: 100 | money }}</strong> {{ progress_text[1] }}</div>
+      <div class="progress-bar__text">{{ progress_text[0] }} <strong class="price-bar js-subtotal-product" data-free-shipping-limit="{{ free_shipping_limit }}">{{ free_shipping_limit | minus: current_price | times: 100 | money }}</strong> {{ progress_text[1] }}</div>
     </div>
   </div>
 {% endif %}

@@ -2542,6 +2542,7 @@ var ls$2 = {
   set: val => localStorage.setItem("cartItemOrder", val)
 };
 // ATOMS: FREESHIPPING BAR, CART DREAWER, CART
+// ATOMS: FIX-CART-PROGRESS-BAR START
 function updateFreeShippingSubtotal(cartTotalPrice) {
   var subtotalProducts = document.documentElement.querySelectorAll(".free_shipping_progress_bar .js-subtotal-product");
   subtotalProducts.forEach(function (subtotalProduct) {
@@ -2557,11 +2558,15 @@ function updateFreeShippingSubtotal(cartTotalPrice) {
       return;
     }
     var remainingAmount = freeShippingLimit * 100 - cartTotalPrice;
+    var progressFill = progressBar.querySelector(".progress-bar__fill");
+    var progressPercentage = Math.min(Math.max(cartTotalPrice / (freeShippingLimit * 100) * 100, 0), 100);
     subtotalProduct.innerHTML = formatMoney$1(remainingAmount);
+    progressFill.style.width = "".concat(progressPercentage, "%");
     progressBar.classList.remove("hide");
     freeShippingText.classList.add("hide");
   });
 }
+// ATOMS: FIX-CART-PROGRESS-BAR END
 function updateAddon(id, quantity) {
   return fetchCart().then(_ref2 => {
     var {

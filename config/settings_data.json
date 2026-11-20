@@ -79,7 +79,7 @@
     "cart_quick_shop_show_quantity_input": false,
     "cart_show_free_shipping_progress": true,
     "free_shipping_text": "<p><strong>Tu envío nacional en esta compra es sin costo</strong></p>",
-    "progress_text": "<p>Agrega $limit más a tu carrito para obtener envío gratis</p>",
+    "progress_text": "<p>Envío nacional sin costo agregando $limit a tu carrito</p>",
     "currency_code_enabled": true,
     "favicon": "shopify://shop_images/emblema.png",
     "checkout_header_image": "",
