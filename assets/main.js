@@ -1,8 +1,8 @@
 /**
  * main.js - Orquestador que lee la configuración y carga módulos
  */
-import { LazyLoader } from '../src/js/lazy-loader.js';
-import { MODULES_CONFIG } from '../src/js/config.js';
+import { LazyLoader } from './src/js/lazy-loader.js';
+import { MODULES_CONFIG } from './src/js/config.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('[Main] Inicializando módulos...');

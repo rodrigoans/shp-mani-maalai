@@ -10,6 +10,7 @@ export const LazyLoader = {
    */
   loadOnIdle(modulePath, initFunction) {
     const load = () => this._importModule(modulePath, initFunction);
+    console.info("Hello from LazyLoad")
     
     if ('requestIdleCallback' in window) {
       requestIdleCallback(load, { timeout: 2000 });

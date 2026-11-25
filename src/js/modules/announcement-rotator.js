@@ -2,6 +2,8 @@
  * Announcement Rotator Module
  */
 export function initAnnouncements() {
+      console.info("Hello from Announcement")
+
   const container = document.querySelector('.utility-bar__announcements');
   if (!container) return;
 

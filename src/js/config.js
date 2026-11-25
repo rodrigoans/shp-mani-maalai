@@ -14,7 +14,10 @@ export const MODULES_CONFIG = {
     {
       path: './modules/old.js',
       init: 'initMiModulo',
-      selector: '.mi-selector'
+    },
+        {
+      path: './modules/custom-events.js',
+      init: 'initMiModulo',
     }
   ],
 
